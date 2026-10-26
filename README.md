@@ -33,6 +33,10 @@ npm run build
 
 The finished sites are written to `_site/devbhoomi-aipan-art/` and `_site/kumaon-aipan-art/`. Deploy those folders, not the source folders: the source pages contain template tags and won't work if opened directly.
 
+### GitHub Pages (automatic)
+
+`.github/workflows/deploy.yml` builds and publishes the site on every push to `main`. One-time setup in the GitHub repository: **Settings → Pages → Source: GitHub Actions**. Progress and errors show up in the repository's **Actions** tab.
+
 ## Project structure
 
 ```
