@@ -11,7 +11,8 @@
     --card-shadow: 0 10px 30px rgba(128, 24, 21, 0.08);
     --hover-shadow: 0 20px 40px rgba(128, 24, 21, 0.15);
     --border-color: rgba(128, 24, 21, 0.15);
-    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    /* Only cheap properties: animating 'all' also animated shadows and layout */
+    --transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, transform 0.25s ease, opacity 0.25s ease;
 }
 
 * {
@@ -199,10 +200,9 @@ header {
 /* Hero Section */
 .hero {
     position: relative;
-    background: linear-gradient(135deg, rgba(128, 24, 21, 0.95), rgba(80, 10, 8, 0.98)), url('../assets/bg_pattern.webp');
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: overlay;
+    /* Pattern pre-blended with the red gradient (assets/hero_bg.webp), so the
+       browser doesn't have to blend a full-width image on every repaint */
+    background: #5E0E0C url('../assets/hero_bg.webp') center / cover;
     color: var(--white);
     padding: 100px 20px 120px;
     text-align: center;
@@ -820,7 +820,6 @@ textarea.form-control {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    backdrop-filter: blur(5px);
 }
 
 .modal-content {
@@ -1128,7 +1127,8 @@ footer::before {
     .nav-links {
         position: fixed;
         top: 0;
-        right: -100%;
+        right: 0;
+        transform: translateX(100%);
         width: 70%;
         height: 100vh;
         background-color: var(--bg-color);
@@ -1137,12 +1137,12 @@ footer::before {
         align-items: center;
         gap: 30px;
         box-shadow: -5px 0 25px rgba(0, 0, 0, 0.15);
-        transition: right 0.4s ease;
+        transition: transform 0.35s ease;
         padding: 40px;
     }
     
     .nav-links.active {
-        right: 0;
+        transform: translateX(0);
     }
     
     .nav-links a {
@@ -1349,4 +1349,42 @@ button[disabled] {
 /* Keep the Biswar dot border above the hero glow */
 .hero-pattern {
     z-index: 2;
+}
+
+/* ===== Photo Credits Page ===== */
+.credits {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.credits p {
+    margin-bottom: 18px;
+}
+
+.credits a {
+    color: var(--primary-color);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.credits-list {
+    list-style: none;
+    margin-bottom: 24px;
+}
+
+.credits-list li {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.credits-list span {
+    display: block;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-top: 4px;
+}
+
+.footer-bottom a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }

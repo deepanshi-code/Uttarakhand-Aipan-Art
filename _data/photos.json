@@ -1,0 +1,100 @@
+{
+  "_comment": "Sources of the photos in assets/photos/. All crops were cropped, resized and converted to WebP from the originals below, and are shared under the same licence (CC BY-SA 4.0).",
+  "licence": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+  },
+  "sources": [
+    {
+      "title": "Aipan design",
+      "author": "KapilAgrawal2110",
+      "url": "https://commons.wikimedia.org/wiki/File:Aipan_design_.jpg",
+      "crops": {
+        "devbhoomi": [
+          "Lakshmi Chowki",
+          "Vasudhara Heritage Painting",
+          "Lakshmi Feet Border"
+        ],
+        "kumaon": [
+          "Pashmina Stole",
+          "Lotus Border Detail"
+        ]
+      }
+    },
+    {
+      "title": "Aipan work",
+      "author": "KapilAgrawal2110",
+      "url": "https://commons.wikimedia.org/wiki/File:Aipan_work.jpg",
+      "crops": {
+        "devbhoomi": [
+          "Saraswati Chowki",
+          "Swastika Chowki",
+          "Shubh-Labh Floor Aipan",
+          "home page story"
+        ],
+        "kumaon": [
+          "Gift Box",
+          "Painted Chowki"
+        ]
+      }
+    },
+    {
+      "title": "Aipan art",
+      "author": "Rashmi dangi",
+      "url": "https://commons.wikimedia.org/wiki/File:Aipan_art.jpg",
+      "crops": {
+        "devbhoomi": [
+          "Aipan on Entrance Steps"
+        ],
+        "kumaon": []
+      }
+    },
+    {
+      "title": "Aipan folk art",
+      "author": "ADITITIWARI 2231119",
+      "url": "https://commons.wikimedia.org/wiki/File:Aipan_folk_art.jpg",
+      "crops": {
+        "devbhoomi": [
+          "Pooja Thali",
+          "Diya Set",
+          "Courtyard Aipan",
+          "about page story"
+        ],
+        "kumaon": [
+          "Serving Tray",
+          "Courtyard Aipan",
+          "Hand-painted Terracotta",
+          "home page story"
+        ]
+      }
+    },
+    {
+      "title": "Lakshmi-maa",
+      "author": "Callofthenight",
+      "url": "https://commons.wikimedia.org/wiki/File:Lakshmi-maa.jpg",
+      "crops": {
+        "devbhoomi": [
+          "Ganne ki Lakshmi"
+        ],
+        "kumaon": []
+      }
+    },
+    {
+      "title": "Aipan wall art in Dehradun",
+      "author": "Amrit Sufi",
+      "url": "https://commons.wikimedia.org/wiki/File:Aipan_wall_art_in_Dehradun.jpg",
+      "crops": {
+        "devbhoomi": [
+          "Ashtadal Kamal Wall Frame",
+          "Aipan Wall Art"
+        ],
+        "kumaon": [
+          "Canvas Tote",
+          "Corporate Gift Set",
+          "Street Wall Art",
+          "about page story"
+        ]
+      }
+    }
+  ]
+}

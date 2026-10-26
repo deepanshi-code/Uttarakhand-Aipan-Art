@@ -1,6 +1,6 @@
 <div class="product-card" data-category="{{ p.filter }}">
     <div class="product-img-wrapper">
-        <img src="{{ p.img }}" alt="{{ p.title }}" width="800" height="800" loading="lazy" decoding="async">
+        <img src="{{ p.img }}-800.webp" srcset="{{ p.img }}-480.webp 480w, {{ p.img }}-800.webp 800w" sizes="(max-width: 768px) 100vw, 380px" alt="{{ p.title }}" width="800" height="600" loading="lazy" decoding="async">
         <div class="product-tag">{{ p.tag }}</div>
     </div>
     <div class="product-body">

@@ -1,5 +1,5 @@
 {
-  "_comment": "Edit products here; the cards, the home-page features and the product popup are all built from this list.",
+  "_comment": "Edit products here; the cards, the home-page features and the product popup are all built from this list. img is a base path: the site loads img-480.webp and img-800.webp.",
   "whatsapp": "919876543210",
   "products": [
     {
@@ -10,7 +10,7 @@
       "label": "Ritualistic Chowki",
       "tag": "Sacred",
       "category": "Ritualistic Chowki",
-      "img": "assets/bg_pattern.webp",
+      "img": "assets/photos/om-chowki",
       "description": "Traditionally painted for initiation rites and seeking wisdom. This Chowki features the geometric Saraswati symbol in the center, encircled by traditional white lines (Biswar) over an auspicious red Geru base. Ideal for study rooms, libraries, and spiritual settings.",
       "featured": true
     },
@@ -22,7 +22,7 @@
       "label": "Ritualistic Chowki",
       "tag": "Popular",
       "category": "Ritualistic Chowki",
-      "img": "assets/bg_pattern.webp",
+      "img": "assets/photos/feet-medallion",
       "description": "Invites wealth, prosperity, and joy into your home. Features the symbolic footprints of Goddess Lakshmi pointing inward (symbolizing arrival) surrounded by detailed geometric border designs and auspicious lotuses.",
       "featured": true
     },
@@ -34,7 +34,7 @@
       "label": "Ritualistic Chowki",
       "tag": "Traditional",
       "category": "Ritualistic Chowki",
-      "img": "assets/bg_pattern.webp",
+      "img": "assets/photos/star-mandala",
       "description": "A symbol of positive energies and good fortune. This wooden Chowki is coated with authentic Geru clay and hand-painted with standard rice paste patterns. Used widely in all traditional festivals and home worships.",
       "featured": false
     },
@@ -46,7 +46,7 @@
       "label": "Divine Wall Art",
       "tag": "Heritage",
       "category": "Divine Wall Art",
-      "img": "assets/wall_art.webp",
+      "img": "assets/photos/border-top",
       "description": "Vasudhara represents streaming wealth and blessings. Hand-drawn by local Kumaoni women artisans, this framed masterpiece features vertical parallel lines representing streaming abundance, bounded by intricate Aipan borders.",
       "featured": true
     },
@@ -58,7 +58,7 @@
       "label": "Divine Wall Art",
       "tag": "New",
       "category": "Divine Wall Art",
-      "img": "assets/wall_art.webp",
+      "img": "assets/photos/wall-leaves",
       "description": "A beautiful rendering of the sacred eight-petaled lotus (Ashtadal Kamal). A symbol of purity and cosmic order, this painting brings serene energies and serves as a premium aesthetic accent for home entrances.",
       "featured": false
     },
@@ -70,7 +70,7 @@
       "label": "Sacred Home Decor",
       "tag": "Decor",
       "category": "Sacred Home Decor",
-      "img": "assets/bg_pattern.webp",
+      "img": "assets/photos/round-floor",
       "description": "A stainless-steel base thali treated and hand-decorated with high-durability waterproof Aipan-inspired patterns. Perfect for festivals like Diwali, Karwa Chauth, or daily worship rituals.",
       "featured": false
     },
@@ -82,7 +82,7 @@
       "label": "Sacred Home Decor",
       "tag": "Festive",
       "category": "Sacred Home Decor",
-      "img": "assets/bg_pattern.webp",
+      "img": "assets/photos/painted-pot",
       "description": "A set of 6 traditional clay diyas hand-plastered with Geru and decorated with detailed white rice-paste creepers. Includes natural wax fillings. A lovely eco-friendly festive decor piece.",
       "featured": false
     }

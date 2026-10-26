@@ -1,0 +1,18 @@
+                <div class="credits">
+                    <p>Photos on this site are crops of openly licensed images from Wikimedia Commons. Each was cropped, resized and converted to WebP, and is shared under the same licence, <a href="{{ photos.licence.url }}">{{ photos.licence.name }}</a>.</p>
+                    <ul class="credits-list">
+                        {%- for src in photos.sources %}
+                        {%- set used = src.crops[siteKey] %}
+                        {%- if used and used.length %}
+                        <li>
+                            <a href="{{ src.url }}">&ldquo;{{ src.title }}&rdquo;</a> by {{ src.author }}, <a href="{{ photos.licence.url }}">{{ photos.licence.name }}</a>
+                            <span>Used for: {{ used | join(", ") }}</span>
+                        </li>
+                        {%- endif %}
+                        {%- endfor %}
+                    </ul>
+                    {%- if siteKey == "kumaon" %}
+                    <p>The wooden coasters image is an AI-generated sample, not a photo of a real product.</p>
+                    {%- endif %}
+                    <p>Icons are from <a href="https://lucide.dev">Lucide</a> (ISC licence).</p>
+                </div>

@@ -1,5 +1,5 @@
 {
-  "_comment": "Edit products here; the cards, the home-page features and the product popup are all built from this list.",
+  "_comment": "Edit products here; the cards, the home-page features and the product popup are all built from this list. img is a base path: the site loads img-480.webp and img-800.webp.",
   "whatsapp": "919988776655",
   "products": [
     {
@@ -10,7 +10,7 @@
       "label": "Home Decor",
       "tag": "Best Seller",
       "category": "Modern Home & Living",
-      "img": "assets/coasters.webp",
+      "img": "assets/photos/coasters",
       "description": "A set of four square wooden coasters painted with traditional red and white geometric Aipan art. They are treated with a specialized waterproof finish, making them perfect for holding hot/cold beverages while showcasing a beautiful touch of Himalayan heritage.",
       "featured": true
     },
@@ -22,7 +22,7 @@
       "label": "Home Decor",
       "tag": "New",
       "category": "Modern Home & Living",
-      "img": "assets/coasters.webp",
+      "img": "assets/photos/round-floor",
       "description": "Handcrafted wooden serving tray decorated with traditional Kumaoni borders and geometric lattice motifs. Perfect for serving guests or displaying as a centerpiece in your dining area.",
       "featured": true
     },
@@ -34,7 +34,7 @@
       "label": "Apparel & Accessories",
       "tag": "Premium",
       "category": "Apparel & Accessories",
-      "img": "assets/bg_pattern.webp",
+      "img": "assets/photos/border-bottom",
       "description": "A luxurious soft wool stole featuring beautiful hand-painted Aipan creepers and floral borders along the margins. A beautiful statement piece that adds ethnic elegance to modern outfits.",
       "featured": false
     },
@@ -46,7 +46,7 @@
       "label": "Apparel & Accessories",
       "tag": "Eco Friendly",
       "category": "Apparel & Accessories",
-      "img": "assets/bg_pattern.webp",
+      "img": "assets/photos/wall-paisley",
       "description": "Durable organic canvas tote bag featuring screen-printed traditional Aipan patterns. Spurred by sustainable living, it is spacious enough for daily groceries or office needs.",
       "featured": false
     },
@@ -58,7 +58,7 @@
       "label": "Gifting Sets",
       "tag": "Festive",
       "category": "Corporate & Festive Gifting",
-      "img": "assets/bg_pattern.webp",
+      "img": "assets/photos/chowki-corner",
       "description": "A beautiful cardboard gift box containing two hand-painted clay diyas, a mini Aipan floor decal, and organic incense cones. An ideal eco-friendly present for festivals and special occasions.",
       "featured": true
     },
@@ -70,7 +70,7 @@
       "label": "Gifting Sets",
       "tag": "Bulk Orders",
       "category": "Corporate & Festive Gifting",
-      "img": "assets/coasters.webp",
+      "img": "assets/photos/wall-leaves",
       "description": "A premium corporate gift set containing an Aipan-embossed diary, a painted bookmark, and a pair of coasters. The notebook cover features customized layout patterns reflecting local craftsmanship.",
       "featured": false
     }

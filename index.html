@@ -47,10 +47,7 @@
         /* ===== Hero ===== */
         .hero {
             position: relative;
-            background: linear-gradient(135deg, rgba(128, 24, 21, 0.95), rgba(80, 10, 8, 0.98)), url('devbhoomi-aipan-art/assets/bg_pattern.webp');
-            background-size: cover;
-            background-position: center;
-            background-blend-mode: overlay;
+            background: #5E0E0C url('devbhoomi-aipan-art/assets/hero_bg.webp') center / cover;
             color: #FFFFFF;
             text-align: center;
             padding: 96px 20px 120px;
@@ -163,7 +160,7 @@
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(128, 24, 21, 0.07);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease;
         }
         .site-card:hover, .site-card:focus-within { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(128, 24, 21, 0.14); }
 
@@ -322,7 +319,7 @@
                 <div class="sites">
                     <article class="site-card devbhoomi">
                         <div class="site-image">
-                            <img src="devbhoomi-aipan-art/assets/wall_art.webp" alt="Framed red and white Aipan wall painting" width="800" height="800" loading="lazy" decoding="async">
+                            <img src="devbhoomi-aipan-art/assets/photos/om-chowki-800.webp" srcset="devbhoomi-aipan-art/assets/photos/om-chowki-480.webp 480w, devbhoomi-aipan-art/assets/photos/om-chowki-800.webp 800w" sizes="(max-width: 768px) 100vw, 540px" alt="Wooden chowki painted with an Om motif and Aipan borders" width="800" height="652" loading="lazy" decoding="async">
                         </div>
                         <div class="site-body">
                             <span class="site-tag">Traditional &amp; Ritual</span>
@@ -339,7 +336,7 @@
 
                     <article class="site-card kumaon">
                         <div class="site-image">
-                            <img src="kumaon-aipan-art/assets/coasters.webp" alt="Wooden coasters hand-painted with Aipan patterns" width="800" height="800" loading="lazy" decoding="async">
+                            <img src="kumaon-aipan-art/assets/photos/coasters-800.webp" srcset="kumaon-aipan-art/assets/photos/coasters-480.webp 480w, kumaon-aipan-art/assets/photos/coasters-800.webp 800w" sizes="(max-width: 768px) 100vw, 540px" alt="Wooden coasters hand-painted with Aipan patterns" width="800" height="800" loading="lazy" decoding="async">
                         </div>
                         <div class="site-body">
                             <span class="site-tag">Modern Lifestyle</span>
@@ -407,7 +404,8 @@
 
     <footer>
         <p class="footer-name">Uttarakhand Aipan Art</p>
-        <p>A student project. Products, prices, contact details and artisan profiles on these sites are sample content.</p>
+        <p>A student project. Products, prices, figures, contact details and artisan profiles on these sites are sample content.</p>
+        <p>Aipan photos: Wikimedia Commons contributors, CC BY-SA 4.0. See <a href="devbhoomi-aipan-art/credits.html">Devbhoomi</a> and <a href="kumaon-aipan-art/credits.html">Kumaon</a> photo credits.</p>
         <p>&copy; 2026 &middot; <a href="https://github.com/deepanshi-code/Uttarakhand-Aipan-Art">Source on GitHub</a></p>
     </footer>
 

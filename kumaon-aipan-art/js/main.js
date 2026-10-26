@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('modal-category').innerText = data.category;
         document.getElementById('modal-price').innerText = data.price;
         document.getElementById('modal-description').innerText = data.description;
-        document.getElementById('modal-image').src = data.img;
+        document.getElementById('modal-image').src = data.img + '-800.webp';
         document.getElementById('modal-image').alt = data.title;
 
         // WhatsApp link pre-filled with the product name and price
