@@ -3,16 +3,413 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aipan Art Sites</title>
+    <title>Uttarakhand Aipan Art | Two Websites for Kumaoni Artisans</title>
+    <meta name="description" content="Two website concepts for women-led Aipan art businesses from Kumaon, Uttarakhand: Devbhoomi for ritual tradition, Kumaon for modern living.">
+    <meta name="theme-color" content="#801815">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23801815' stroke='%23D4AF37' stroke-width='2'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia,serif' font-size='18' font-weight='700' fill='%23fff'%3EA%3C/text%3E%3C/svg%3E">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Uttarakhand Aipan Art">
+    <meta property="og:description" content="Two website concepts for women-led Aipan art businesses from Kumaon, Uttarakhand.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap">
     <style>
-        body { font-family: system-ui, sans-serif; max-width: 480px; margin: 60px auto; padding: 0 16px; color: #2B2523; background: #FFFDF9; }
-        a { display: block; margin: 12px 0; padding: 14px 18px; border: 1px solid #DDD; border-radius: 6px; color: #801815; text-decoration: none; font-weight: 600; }
-        a:hover, a:focus-visible { border-color: #801815; }
+        :root {
+            --geru: #801815;          /* Red ochre clay base */
+            --geru-deep: #500A08;
+            --gold: #D4AF37;
+            --gold-text: #7A5F17;     /* Gold that stays readable on cream */
+            --biswar: #FFFDF9;        /* Rice-paste white */
+            --cream: #F8F5EF;
+            --ink: #2B2523;
+            --muted: #5E5552;
+            --terracotta: #C23B22;
+            --beige: #F5F5DC;
+            --line: rgba(128, 24, 21, 0.14);
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--biswar);
+            color: var(--ink);
+            line-height: 1.65;
+        }
+
+        img { max-width: 100%; height: auto; display: block; }
+        a { color: inherit; }
+
+        .container { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+
+        :focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+
+        /* ===== Hero ===== */
+        .hero {
+            position: relative;
+            background: linear-gradient(135deg, rgba(128, 24, 21, 0.95), rgba(80, 10, 8, 0.98)), url('devbhoomi-aipan-art/assets/bg_pattern.webp');
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 96px 20px 120px;
+            overflow: hidden;
+        }
+
+        /* Darker centre keeps text readable over the busy pattern */
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 60% 70% at 50% 50%, rgba(60, 6, 5, 0.85) 0%, rgba(60, 6, 5, 0.55) 55%, rgba(60, 6, 5, 0) 100%);
+        }
+        .hero > * { position: relative; z-index: 1; }
+
+        /* Biswar dot border, as painted along Aipan edges */
+        .hero::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 100%;
+            height: 30px;
+            background: radial-gradient(circle, var(--biswar) 4px, transparent 5px);
+            background-size: 20px 20px;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            background-color: rgba(212, 175, 55, 0.06);
+            border-radius: 50px;
+            padding: 6px 18px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(2.2rem, 6vw, 3.8rem);
+            line-height: 1.15;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 640px;
+            margin: 0 auto 36px;
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.88);
+        }
+
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 28px;
+            border-radius: 4px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+        }
+        .btn:hover { transform: translateY(-2px); }
+
+        .btn-gold { background-color: var(--gold); color: var(--geru-deep); box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3); }
+        .btn-gold:hover { background-color: #FFFFFF; }
+
+        .btn-outline { border: 2px solid rgba(255, 255, 255, 0.85); color: #FFFFFF; }
+        .btn-outline:hover { background-color: #FFFFFF; color: var(--geru); }
+
+        /* ===== Sections ===== */
+        section { padding: 88px 0; }
+        .section-alt { background-color: var(--cream); }
+
+        .section-head { text-align: center; max-width: 640px; margin: 0 auto 52px; }
+
+        .kicker {
+            display: block;
+            color: var(--gold-text);
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--geru);
+            font-size: clamp(1.7rem, 3.5vw, 2.3rem);
+            line-height: 1.25;
+            margin-bottom: 14px;
+        }
+
+        .section-head p { color: var(--muted); }
+
+        /* ===== Site Cards ===== */
+        .sites { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; }
+
+        .site-card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            background-color: #FFFFFF;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(128, 24, 21, 0.07);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .site-card:hover, .site-card:focus-within { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(128, 24, 21, 0.14); }
+
+        .site-image { aspect-ratio: 16 / 10; overflow: hidden; background-color: var(--cream); }
+        .site-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+        .site-card:hover .site-image img { transform: scale(1.05); }
+
+        .site-body { display: flex; flex-direction: column; flex: 1; padding: 30px 30px 34px; }
+
+        .site-tag {
+            align-self: flex-start;
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 5px 12px;
+            border-radius: 50px;
+            margin-bottom: 16px;
+        }
+
+        .site-card h3 { font-size: 1.6rem; line-height: 1.2; margin-bottom: 12px; }
+        .site-card p { color: var(--muted); margin-bottom: 18px; }
+
+        .site-features { list-style: none; margin-bottom: 28px; }
+        .site-features li { position: relative; padding-left: 22px; margin-bottom: 8px; font-size: 0.95rem; }
+        .site-features li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0.55em;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+
+        .site-link {
+            margin-top: auto;
+            align-self: flex-start;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border-radius: 4px;
+            color: #FFFFFF;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        /* Whole card is clickable through its one link */
+        .site-link::after { content: ""; position: absolute; inset: 0; }
+        .site-link span { transition: transform 0.25s ease; }
+        .site-card:hover .site-link span { transform: translateX(4px); }
+
+        /* Devbhoomi: sacred, Geru and gold */
+        .devbhoomi { border-top: 4px solid var(--gold); }
+        .devbhoomi .site-tag { color: var(--gold-text); border: 1px solid var(--gold); }
+        .devbhoomi h3 { font-family: 'Cinzel', serif; color: var(--geru); letter-spacing: 1px; }
+        .devbhoomi .site-features li::before { background-color: var(--geru); }
+        .devbhoomi .site-link { background-color: var(--geru); }
+
+        /* Kumaon: modern, terracotta and beige */
+        .kumaon { border-top: 4px solid var(--terracotta); }
+        .kumaon .site-tag { color: var(--terracotta); background-color: rgba(194, 59, 34, 0.08); }
+        .kumaon h3 { font-family: 'Outfit', sans-serif; font-weight: 800; color: #333333; letter-spacing: -0.5px; }
+        .kumaon .site-features li::before { background-color: var(--terracotta); border-radius: 2px; }
+        .kumaon .site-link { background-color: var(--terracotta); border-radius: 6px; }
+
+        /* ===== What is Aipan ===== */
+        .elements { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 28px; }
+
+        .element { text-align: center; padding: 10px 16px; }
+
+        .swatch {
+            width: 84px;
+            height: 84px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            border: 3px solid var(--gold);
+            box-shadow: 0 6px 18px rgba(128, 24, 21, 0.15);
+        }
+        .swatch-geru { background-color: var(--geru); }
+        .swatch-biswar {
+            background-color: var(--geru);
+            background-image: radial-gradient(circle, var(--biswar) 3px, transparent 4px);
+            background-size: 14px 14px;
+        }
+        .swatch-bindu { background: radial-gradient(circle, var(--biswar) 7px, var(--geru) 8px); }
+
+        .element h3 { font-family: 'Cinzel', serif; color: var(--geru); font-size: 1.25rem; margin-bottom: 8px; }
+        .element p { color: var(--muted); font-size: 0.95rem; }
+
+        /* ===== About Project ===== */
+        .about { display: grid; grid-template-columns: 1.2fr 1fr; gap: 48px; align-items: center; }
+        .about p { color: var(--muted); margin-bottom: 16px; }
+
+        .facts { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .facts li {
+            background-color: #FFFFFF;
+            border: 1px solid var(--line);
+            border-left: 4px solid var(--gold);
+            border-radius: 6px;
+            padding: 18px 20px;
+        }
+        .facts strong { display: block; font-family: 'Cinzel', serif; color: var(--geru); font-size: 1.5rem; line-height: 1.2; }
+        .facts span { font-size: 0.88rem; color: var(--muted); }
+
+        .text-link { color: var(--geru); font-weight: 600; text-underline-offset: 4px; }
+        .text-link:hover { color: var(--gold-text); }
+
+        /* ===== Footer ===== */
+        footer {
+            background: linear-gradient(135deg, #1C0504, #2B0A08);
+            color: rgba(255, 255, 255, 0.75);
+            text-align: center;
+            padding: 44px 20px;
+            font-size: 0.9rem;
+        }
+        footer .footer-name { font-family: 'Cinzel', serif; color: var(--gold); font-size: 1.2rem; margin-bottom: 10px; }
+        footer p + p { margin-top: 6px; }
+        footer a { color: #FFFFFF; }
+
+        @media (max-width: 768px) {
+            .hero { padding: 72px 20px 96px; }
+            .eyebrow { font-size: 0.68rem; letter-spacing: 1.5px; padding: 6px 14px; }
+            section { padding: 64px 0; }
+            .about { grid-template-columns: 1fr; gap: 32px; }
+            .site-body { padding: 24px 22px 28px; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+        }
     </style>
 </head>
 <body>
-    <h1>Aipan Art Sites</h1>
-    <a href="devbhoomi-aipan-art/index.html">Devbhoomi Aipan Art</a>
-    <a href="kumaon-aipan-art/index.html">Kumaon Aipan Art</a>
+
+    <header class="hero">
+        <span class="eyebrow">Folk art of Kumaon &middot; Uttarakhand</span>
+        <h1>Uttarakhand Aipan Art</h1>
+        <p>Two websites for women-led Aipan art businesses from the Kumaon hills: one rooted in ritual tradition, one designed for modern living.</p>
+        <div class="hero-actions">
+            <a href="devbhoomi-aipan-art/index.html" class="btn btn-gold">Explore Devbhoomi</a>
+            <a href="kumaon-aipan-art/index.html" class="btn btn-outline">Explore Kumaon</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Site Chooser -->
+        <section aria-labelledby="sites-title">
+            <div class="container">
+                <div class="section-head">
+                    <span class="kicker">Choose a Website</span>
+                    <h2 id="sites-title">One Tradition, Two Directions</h2>
+                    <p>Each site is designed for a different kind of buyer, with its own colours, typography and catalogue.</p>
+                </div>
+
+                <div class="sites">
+                    <article class="site-card devbhoomi">
+                        <div class="site-image">
+                            <img src="devbhoomi-aipan-art/assets/wall_art.webp" alt="Framed red and white Aipan wall painting" width="800" height="800" loading="lazy" decoding="async">
+                        </div>
+                        <div class="site-body">
+                            <span class="site-tag">Traditional &amp; Ritual</span>
+                            <h3>Devbhoomi Aipan Art</h3>
+                            <p>Sacred Aipan as it has been painted for generations, for homes, festivals and places of worship.</p>
+                            <ul class="site-features">
+                                <li>Ritual Chowkis for Saraswati and Lakshmi puja</li>
+                                <li>Framed heritage wall art</li>
+                                <li>Custom commissions and festive decor</li>
+                            </ul>
+                            <a href="devbhoomi-aipan-art/index.html" class="site-link">Visit Devbhoomi <span aria-hidden="true">&rarr;</span></a>
+                        </div>
+                    </article>
+
+                    <article class="site-card kumaon">
+                        <div class="site-image">
+                            <img src="kumaon-aipan-art/assets/coasters.webp" alt="Wooden coasters hand-painted with Aipan patterns" width="800" height="800" loading="lazy" decoding="async">
+                        </div>
+                        <div class="site-body">
+                            <span class="site-tag">Modern Lifestyle</span>
+                            <h3>Kumaon Aipan Art</h3>
+                            <p>Aipan motifs on everyday, eco-friendly products, with bulk and corporate gifting for businesses.</p>
+                            <ul class="site-features">
+                                <li>Coasters, trays and home decor</li>
+                                <li>Hand-painted stoles and canvas totes</li>
+                                <li>Festive and corporate gift sets</li>
+                            </ul>
+                            <a href="kumaon-aipan-art/index.html" class="site-link">Visit Kumaon <span aria-hidden="true">&rarr;</span></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- What is Aipan -->
+        <section class="section-alt" aria-labelledby="aipan-title">
+            <div class="container">
+                <div class="section-head">
+                    <span class="kicker">The Art Form</span>
+                    <h2 id="aipan-title">What Is Aipan?</h2>
+                    <p>A ritual folk art of the Kumaon region, traditionally drawn by women on thresholds, courtyards and altars.</p>
+                </div>
+                <div class="elements">
+                    <div class="element">
+                        <div class="swatch swatch-geru" aria-hidden="true"></div>
+                        <h3>Geru</h3>
+                        <p>A red ochre clay base, symbolising the earth and fertility.</p>
+                    </div>
+                    <div class="element">
+                        <div class="swatch swatch-biswar" aria-hidden="true"></div>
+                        <h3>Biswar</h3>
+                        <p>White lines of ground rice paste, representing purity and peace.</p>
+                    </div>
+                    <div class="element">
+                        <div class="swatch swatch-bindu" aria-hidden="true"></div>
+                        <h3>Bindu</h3>
+                        <p>Every design begins with a single dot at its centre, from which the pattern grows.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Project -->
+        <section aria-labelledby="project-title">
+            <div class="container about">
+                <div>
+                    <span class="kicker">About This Project</span>
+                    <h2 id="project-title">Built for Local Artisans</h2>
+                    <p>These sites explore how a simple, fast website could help small Aipan art businesses reach buyers beyond their local area, with enquiries going straight to WhatsApp or email.</p>
+                    <p>Both sites work on phones, can be used with a keyboard or screen reader, and meet WCAG AA colour contrast.</p>
+                    <a class="text-link" href="https://github.com/deepanshi-code/Uttarakhand-Aipan-Art">View the source code on GitHub</a>
+                </div>
+                <ul class="facts">
+                    <li><strong>2</strong><span>brand concepts</span></li>
+                    <li><strong>10</strong><span>pages</span></li>
+                    <li><strong>13</strong><span>sample products</span></li>
+                    <li><strong>AA</strong><span>WCAG colour contrast</span></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p class="footer-name">Uttarakhand Aipan Art</p>
+        <p>A student project. Products, prices, contact details and artisan profiles on these sites are sample content.</p>
+        <p>&copy; 2026 &middot; <a href="https://github.com/deepanshi-code/Uttarakhand-Aipan-Art">Source on GitHub</a></p>
+    </footer>
+
 </body>
 </html>
