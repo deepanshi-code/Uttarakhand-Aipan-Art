@@ -21,7 +21,7 @@ modal: false
                     <!-- Left: Form -->
                     <div class="form-card">
                         <h3>Send an Inquiry</h3>
-                        <form id="kumaon-contact-form" class="js-contact-form" novalidate data-endpoint="" data-mailto="hello@kumaonaipan.com">
+                        <form id="kumaon-contact-form" class="js-contact-form" novalidate data-endpoint="" data-mailto="{{ kumaon.contact.emails[0] }}">
                             <!-- Spam trap: real visitors never see or fill this field -->
                             <input type="text" name="_gotcha" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
                             <div class="form-group">
@@ -59,38 +59,39 @@ modal: false
                                     <div class="contact-icon" aria-hidden="true">{% icon "map-pin" %}</div>
                                     <div class="contact-info">
                                         <h4>Studio & Workshop</h4>
-                                        <p>Craft Guild House, Haldwani,<br>Nainital, Uttarakhand - 263139, India</p>
+                                        <p>{{ kumaon.contact.address | join('<br>') | safe }}</p>
                                     </div>
                                 </div>
                                 <div class="contact-block">
                                     <div class="contact-icon" aria-hidden="true">{% icon "mail" %}</div>
                                     <div class="contact-info">
                                         <h4>Email Support</h4>
-                                        <p>hello@kumaonaipan.com<br>bulkorders@kumaonaipan.com</p>
+                                        <p>{{ kumaon.contact.emails | join('<br>') | safe }}</p>
                                     </div>
                                 </div>
                                 <div class="contact-block">
                                     <div class="contact-icon" aria-hidden="true">{% icon "phone" %}</div>
                                     <div class="contact-info">
                                         <h4>Phone & Whatsapp</h4>
-                                        <p>+91 99887 76655<br>Mon-Sat: 10:00 AM - 5:00 PM IST</p>
+                                        <p>{{ kumaon.contact.phone }}<br>{{ kumaon.contact.hours }}</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <div>
+                            {%- set social = kumaon.contact.social %}
+                            {%- if social.facebook or social.instagram or social.youtube %}
                             <div class="social-panel">
                                 <h4>Follow Our Impact</h4>
                                 <div class="social-row">
-                                    <a href="#" class="social-icon-btn" aria-label="Facebook">{% icon "facebook" %}</a>
-                                    <a href="#" class="social-icon-btn" aria-label="Instagram">{% icon "instagram" %}</a>
-                                    <a href="#" class="social-icon-btn" aria-label="YouTube">{% icon "youtube" %}</a>
+                                    {%- set socialClass = "social-icon-btn" %}
+                                    {%- include "social-links.njk" %}
                                 </div>
                             </div>
-                            <!-- TODO: once the studio address is final, put the full address in q= below -->
+                            {%- endif %}
                             <div class="map-container">
-                                <iframe src="https://maps.google.com/maps?q=Haldwani%2C+Uttarakhand+263139&amp;output=embed" title="Map showing our studio in Haldwani" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <iframe src="https://maps.google.com/maps?q={{ kumaon.contact.mapQuery | urlencode }}&amp;output=embed" title="Map showing our studio location" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
                     </div>

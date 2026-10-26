@@ -22,7 +22,7 @@ modal: false
                     <!-- Left: Interactive Form -->
                     <div class="contact-card">
                         <h3>Send Us a Message</h3>
-                        <form id="devbhoomi-contact-form" class="js-contact-form" novalidate data-endpoint="" data-mailto="inquiry@devbhoomiaipan.org">
+                        <form id="devbhoomi-contact-form" class="js-contact-form" novalidate data-endpoint="" data-mailto="{{ devbhoomi.contact.emails[0] }}">
                             <!-- Spam trap: real visitors never see or fill this field -->
                             <input type="text" name="_gotcha" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
                             <div class="form-group">
@@ -54,35 +54,36 @@ modal: false
                                     <div class="info-icon" aria-hidden="true">{% icon "map-pin" %}</div>
                                     <div class="info-text">
                                         <h4>Center Address</h4>
-                                        <p>Artisan Guild Road, Almora,<br>Uttarakhand - 263601, India</p>
+                                        <p>{{ devbhoomi.contact.address | join('<br>') | safe }}</p>
                                     </div>
                                 </div>
                                 <div class="info-item">
                                     <div class="info-icon" aria-hidden="true">{% icon "mail" %}</div>
                                     <div class="info-text">
                                         <h4>Email Inquiries</h4>
-                                        <p>inquiry@devbhoomiaipan.org<br>customorders@devbhoomiaipan.org</p>
+                                        <p>{{ devbhoomi.contact.emails | join('<br>') | safe }}</p>
                                     </div>
                                 </div>
                                 <div class="info-item">
                                     <div class="info-icon" aria-hidden="true">{% icon "phone" %}</div>
                                     <div class="info-text">
                                         <h4>Call Our Studio</h4>
-                                        <p>+91 98765 43210<br>Mon-Sat: 9:00 AM - 6:00 PM IST</p>
+                                        <p>{{ devbhoomi.contact.phone }}<br>{{ devbhoomi.contact.hours }}</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <div>
+                            {%- set social = devbhoomi.contact.social %}
+                            {%- if social.facebook or social.instagram or social.youtube %}
                             <div class="social-links">
-                                <a href="#" class="social-btn" aria-label="Facebook">{% icon "facebook" %}</a>
-                                <a href="#" class="social-btn" aria-label="Instagram">{% icon "instagram" %}</a>
-                                <a href="#" class="social-btn" aria-label="YouTube">{% icon "youtube" %}</a>
+                                {%- set socialClass = "social-btn" %}
+                                {%- include "social-links.njk" %}
                             </div>
-                            <!-- TODO: once the studio address is final, put the full address in q= below -->
+                            {%- endif %}
                             <div class="map-placeholder">
-                                <iframe src="https://maps.google.com/maps?q=Almora%2C+Uttarakhand+263601&amp;output=embed" title="Map showing our studio in Almora" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <iframe src="https://maps.google.com/maps?q={{ devbhoomi.contact.mapQuery | urlencode }}&amp;output=embed" title="Map showing our studio location" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
                     </div>

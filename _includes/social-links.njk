@@ -1,0 +1,8 @@
+{#- Social icons from <site>.contact.social; networks without a URL are not shown.
+    Set `social` (the URLs) and optionally `socialClass` before including. -#}
+{%- set socialLabels = { "facebook": "Facebook", "instagram": "Instagram", "youtube": "YouTube" } %}
+{%- for net in ["facebook", "instagram", "youtube"] %}
+{%- if social[net] %}
+                    <a href="{{ social[net] }}"{% if socialClass %} class="{{ socialClass }}"{% endif %} aria-label="{{ socialLabels[net] }} (opens in a new tab)" target="_blank" rel="noopener">{% icon net %}</a>
+{%- endif %}
+{%- endfor %}

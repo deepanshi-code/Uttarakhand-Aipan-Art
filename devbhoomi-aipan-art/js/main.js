@@ -93,7 +93,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const whatsappBtn = document.getElementById('modal-whatsapp');
         if (whatsappBtn) {
             const text = `Hi! I am interested in the ${data.title} (${data.price}). Is it available?`;
-            whatsappBtn.href = `https://wa.me/${whatsappBtn.dataset.whatsapp}?text=${encodeURIComponent(text)}`;
+            // No number configured (demo): wa.me without a number lets the visitor pick the chat
+            whatsappBtn.href = `https://wa.me/${whatsappBtn.dataset.whatsapp || ''}?text=${encodeURIComponent(text)}`;
             whatsappBtn.setAttribute('aria-label', `Enquire on WhatsApp about ${data.title} (opens in a new tab)`);
         }
 

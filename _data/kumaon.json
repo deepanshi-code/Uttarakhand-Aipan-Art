@@ -1,6 +1,25 @@
 {
   "_comment": "Edit products here; the cards, the home-page features and the product popup are all built from this list. img is a base path: the site loads img-480.webp and img-800.webp.",
-  "whatsapp": "919988776655",
+  "contact": {
+    "_comment": "Demo values that cannot reach anyone: .example email domains are reserved and the phone number is all zeros. An empty whatsapp opens WhatsApp's chat picker with the message filled in. Replace everything here with the business's real details before launch; social icons appear once a URL is set.",
+    "whatsapp": "",
+    "phone": "+91 00000 00000",
+    "hours": "Mon-Sat: 10:00 AM - 5:00 PM IST",
+    "emails": [
+      "hello@kumaon.example",
+      "bulkorders@kumaon.example"
+    ],
+    "address": [
+      "Craft Guild House, Haldwani,",
+      "Nainital, Uttarakhand - 263139, India"
+    ],
+    "mapQuery": "Haldwani, Uttarakhand 263139",
+    "social": {
+      "facebook": "",
+      "instagram": "",
+      "youtube": ""
+    }
+  },
   "products": [
     {
       "id": "aipan-coasters",

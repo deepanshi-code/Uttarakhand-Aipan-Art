@@ -79,10 +79,10 @@ These values are **not real yet**. Search the code for `TODO` to find most of th
 |---|---|---|
 | Product photos | `assets/` plus each product's `img` in `_data/<site>.json` | Products share 2–3 sample images. Use a real photo of each product. |
 | Artisan photos, names and quotes | `about.html` | Initials are shown in place of photos. Publish only real artisans who have given consent. |
-| WhatsApp number | `"whatsapp"` in `_data/<site>.json` | Placeholder. Format: country code + number, no `+` or spaces, e.g. `919812345678`. |
-| Phone, email, street address | `contact.html` | Placeholders. |
-| Map | `<iframe>` in `contact.html` | Shows the town only. Put the full address in `q=` once it is final. |
-| Social media links | `href="#"` in `_includes/<site>/footer.njk` and in `contact.html` | Add real profile URLs, or remove the icons. |
+| WhatsApp number | `contact.whatsapp` in `_data/<site>.json` | Empty, so the button opens WhatsApp's chat picker with the message filled in. Format: country code + number, no `+` or spaces, e.g. `919812345678`. |
+| Phone, emails, street address, hours | `contact` in `_data/<site>.json` | Demo values that can't reach anyone (`+91 00000 00000`, reserved `.example` email domains). |
+| Map | `contact.mapQuery` in `_data/<site>.json` | Shows the town only. Use the full address once it is final. |
+| Social media links | `contact.social` in `_data/<site>.json` | Empty, so no icons are shown. Each icon appears automatically once its URL is set. |
 | Contact form backend | `data-endpoint=""` on the contact form | See below. |
 | Newsletter backend | `data-endpoint=""` on the footer form | See below. Until it is set, the form says sign-up is not open. |
 | Social share image | `<head>` of each page | After deploying, add `og:url` and an absolute `og:image` URL. |
@@ -94,6 +94,11 @@ These values are **not real yet**. Search the code for `TODO` to find most of th
 3. Send a test message and check that it arrives.
 
 If `data-endpoint` is empty, the contact form opens the visitor's email app, addressed to the email in `data-mailto`. A success message is shown only after the server confirms the message was received.
+
+## Project documents
+
+- [`docs/user-testing-kit.md`](docs/user-testing-kit.md): script, tasks, questionnaire and results sheets for testing with 5 people, plus Lighthouse steps
+- [`docs/report-guide.md`](docs/report-guide.md): report structure, wireframe checklist and pre-submission checks
 
 ## Quality checks already done
 

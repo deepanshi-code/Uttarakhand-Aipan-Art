@@ -13,8 +13,8 @@
                     <p id="modal-description"></p>
                     <div class="modal-actions">
                         <a href="contact.html" class="modal-btn-submit" style="text-align: center;">Send Inquiry</a>
-                        <!-- TODO: replace with the business's real WhatsApp number (country code, no + or spaces) -->
-                        <a href="#" id="modal-whatsapp" class="whatsapp-btn" data-whatsapp="{{ kumaon.whatsapp }}" target="_blank" rel="noopener">Enquire on WhatsApp</a>
+                        <!-- WhatsApp number comes from contact.whatsapp in _data/kumaon.json -->
+                        <a href="#" id="modal-whatsapp" class="whatsapp-btn" data-whatsapp="{{ kumaon.contact.whatsapp }}" target="_blank" rel="noopener">Enquire on WhatsApp</a>
                     </div>
                 </div>
             </div>
