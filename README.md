@@ -69,6 +69,7 @@ wireframes/                     early wireframes (not deployed)
 | A menu link or footer text | `_includes/<site>/header.njk` or `footer.njk` |
 | A page's browser title or search description | the `title` / `description` lines at the top of that page |
 | A page's content | that page's `.html` file |
+| An icon | write `{% icon "phone" %}` in a page; the available icons are listed in `lib/icons.js` (from [Lucide](https://lucide.dev), ISC licence) |
 
 ## Before going live: replace the placeholders
 

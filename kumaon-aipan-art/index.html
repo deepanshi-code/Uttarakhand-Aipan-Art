@@ -6,7 +6,8 @@ modal: true
 ---
     <main>
         <!-- Hero Section -->
-        <section class="hero">
+        <section class="hero hero-home">
+            <div class="hero-split">
             <div class="hero-content">
                 <span class="hero-tag">Modern Folk Lifestyle</span>
                 <h1>Bringing Heritage to Modern Living</h1>
@@ -15,6 +16,11 @@ modal: true
                     <a href="products.html" class="btn-primary">Shop Collection</a>
                     <a href="about.html" class="btn-secondary">Meet Our Artisans</a>
                 </div>
+            </div>
+            <div class="hero-visual">
+                <img src="assets/coasters.webp" alt="Set of four wooden coasters hand-painted with red Aipan patterns" width="800" height="800" fetchpriority="high">
+                <span class="hero-visual-tag">Hand-painted in Kumaon</span>
+            </div>
             </div>
         </section>
 
@@ -27,17 +33,17 @@ modal: true
                 </div>
                 <div class="grid-3">
                     <div class="info-card">
-                        <div class="info-card-icon" aria-hidden="true">🌱</div>
+                        <div class="info-card-icon" aria-hidden="true">{% icon "sprout" %}</div>
                         <h3>Eco-Friendly Base</h3>
                         <p>We use natural pine wood, organic cotton canvas, and terracotta clays to create sustainable items that protect the earth.</p>
                     </div>
                     <div class="info-card">
-                        <div class="info-card-icon" aria-hidden="true">✨</div>
+                        <div class="info-card-icon" aria-hidden="true">{% icon "sparkles" %}</div>
                         <h3>Modern Adaptation</h3>
                         <p>We translate ancient temple art motifs onto functional items like coasters, stoles, notebooks, and trays for daily life.</p>
                     </div>
                     <div class="info-card">
-                        <div class="info-card-icon" aria-hidden="true">👩</div>
+                        <div class="info-card-icon" aria-hidden="true">{% icon "brush" %}</div>
                         <h3>Artisan Hand-painted</h3>
                         <p>Every product is manually sketched and detailed by women artisans in Kumaoni self-help groups, empowering local lives.</p>
                     </div>
