@@ -1,0 +1,12 @@
+<div class="product-card" data-category="{{ p.filter }}">
+    <div class="product-img-wrapper">
+        <img src="{{ p.img }}" alt="{{ p.title }}" width="800" height="800" loading="lazy" decoding="async">
+        <div class="product-tag">{{ p.tag }}</div>
+    </div>
+    <div class="product-body">
+        <span class="product-meta">{{ p.label }}</span>
+        <h3>{{ p.title }}</h3>
+        <div class="product-price">{{ p.price }}</div>
+        <button type="button" class="product-btn" data-id="{{ p.id }}">Quick View</button>
+    </div>
+</div>

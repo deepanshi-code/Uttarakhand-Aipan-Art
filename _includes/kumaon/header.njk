@@ -1,0 +1,27 @@
+    <!-- Header & Navigation -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <div class="logo-circle">K</div>
+                    <div class="logo-text">
+                        <span class="logo-name">Kumaon</span>
+                        <span>Aipan Art</span>
+                    </div>
+                </a>
+            </div>
+            <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html"{% if nav == "index" %} class="active"{% endif %}>Home</a></li>
+                <li><a href="about.html"{% if nav == "about" %} class="active"{% endif %}>About Us</a></li>
+                <li><a href="products.html"{% if nav == "products" %} class="active"{% endif %}>Products</a></li>
+                <li><a href="gallery.html"{% if nav == "gallery" %} class="active"{% endif %}>Gallery</a></li>
+                <li><a href="contact.html"{% if nav == "contact" %} class="active"{% endif %}>Contact Us</a></li>
+                <li><a href="contact.html" class="cta-btn">Bulk Inquiries</a></li>
+            </ul>
+        </div>
+    </header>

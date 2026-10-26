@@ -1,0 +1,8 @@
+# Netlify settings, used when the site is deployed from a Git repository.
+# (For a manual drag-and-drop deploy, run `npm run build` and drop the _site folder instead.)
+[build]
+  command = "npm run build"
+  publish = "_site"
+
+[build.environment]
+  NODE_VERSION = "20"

@@ -1,0 +1,25 @@
+    <!-- Product Details Modal -->
+    <div class="modal-overlay" id="product-modal">
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button type="button" class="close-modal" id="close-modal" aria-label="Close product details">&times;</button>
+            <div class="modal-body">
+                <div class="modal-img">
+                    <img id="modal-image" src="" alt="">
+                </div>
+                <div class="modal-details">
+                    <span class="product-category" id="modal-category"></span>
+                    <h2 id="modal-title"></h2>
+                    <div class="product-price" id="modal-price"></div>
+                    <p id="modal-description"></p>
+                    <div class="modal-actions">
+                        <a href="contact.html" class="modal-btn" style="text-align: center;">Inquire Now</a>
+                        <!-- TODO: replace with the business's real WhatsApp number (country code, no + or spaces) -->
+                        <a href="#" id="modal-whatsapp" class="whatsapp-btn" data-whatsapp="{{ devbhoomi.whatsapp }}" target="_blank" rel="noopener">Enquire on WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product details for the popup, generated from _data/devbhoomi.json -->
+    <script type="application/json" id="product-data">{{ devbhoomi.products | dump | safe }}</script>

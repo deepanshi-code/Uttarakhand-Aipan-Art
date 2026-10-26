@@ -1,0 +1,4 @@
+{
+  "layout": "kumaon.njk",
+  "permalink": "{{ page.filePathStem }}.html"
+}

@@ -1,0 +1,87 @@
+---
+title: "Devbhoomi Aipan Art | Sacred Folk Art of Uttarakhand"
+description: "Discover the spiritual heritage of Uttarakhand through authentic, hand-painted Aipan Chowkis, Wall Art, and Home Decor crafted by local Kumaoni women."
+nav: "index"
+modal: true
+---
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <span class="hero-badge">Preserving Sacred Traditions</span>
+                <h1>Divine Art from the Land of Gods</h1>
+                <p>Bringing auspiciousness, cosmic energy, and traditional Kumaoni craftsmanship to your homes with authentic, hand-painted Aipan art.</p>
+                <div class="hero-buttons">
+                    <a href="products.html" class="btn-primary">Explore Catalogue</a>
+                    <a href="about.html" class="btn-secondary">Learn Our Story</a>
+                </div>
+            </div>
+            <div class="hero-pattern"></div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Why Choose Devbhoomi</span>
+                    <h2 class="section-title">The Essence of Our Craft</h2>
+                </div>
+                <div class="grid-3">
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">ॐ</div>
+                        <h3>Sacred Geometry</h3>
+                        <p>Every motif has a deep-rooted spiritual meaning, created using specific geometric formulas passed down through generations.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">✿</div>
+                        <h3>Pure Ingredients</h3>
+                        <p>Painted traditionally using organic red soil (Geru) and rich rice paste (Biswar) to maintain authentic purity.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">👥</div>
+                        <h3>Artisan Empowered</h3>
+                        <p>Sourced directly from local women artisans of Kumaon, providing them direct economic independence and growth.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Story Teaser Section -->
+        <section class="section section-bg">
+            <div class="container">
+                <div class="grid-2">
+                    <div class="story-image">
+                        <img src="assets/bg_pattern.webp" alt="Traditional Aipan Pattern Background" width="800" height="800" loading="lazy" decoding="async">
+                    </div>
+                    <div class="story-text">
+                        <span class="section-subtitle">Our Legacy</span>
+                        <h3>Folk Art Rooted in the Himalayas</h3>
+                        <p>Aipan is a traditional ritualistic folk art native to the Kumaon region of Uttarakhand. Drawn primarily on doors, courtyards, and home entrances, it represents peace, prosperity, and cosmic alignment.</p>
+                        <p>At Devbhoomi Aipan Art, we keep this ancient heritage alive. Each piece is drawn with devotion, beginning with a central dot representing the universe, expanding into intricate mandalas and nature-inspired borders.</p>
+                        <div class="highlight-quote">
+                            "Aipan is not just a drawing; it is a prayer sketched on the earth, welcoming positive energies."
+                        </div>
+                        <a href="about.html" class="btn-primary" style="display: inline-block;">Read Our Complete Story</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Selected Masterpieces</span>
+                    <h2 class="section-title">Featured Collections</h2>
+                </div>
+                <div class="grid-3">
+                    {% for p in devbhoomi.products | selectattr("featured") %}
+                        {% include "devbhoomi/product-card.njk" %}
+                    {% endfor %}
+                </div>
+                <div style="text-align: center; margin-top: 50px;">
+                    <a href="products.html" class="btn-secondary" style="color: var(--primary-color); border-color: var(--primary-color);">View All Products</a>
+                </div>
+            </div>
+        </section>
+    </main>

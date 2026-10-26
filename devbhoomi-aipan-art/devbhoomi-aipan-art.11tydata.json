@@ -1,0 +1,4 @@
+{
+  "layout": "devbhoomi.njk",
+  "permalink": "{{ page.filePathStem }}.html"
+}

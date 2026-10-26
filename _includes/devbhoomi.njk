@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="theme-color" content="#801815">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <!-- Social sharing preview. After deploying, add og:url and an absolute og:image URL -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Devbhoomi Aipan Art">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ description }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Remove this banner once real products, contact details and artisan profiles are in place -->
+    <div class="demo-banner" role="note">
+        Demo site for a student project: products, prices, contact details and artisan profiles are sample content.
+    </div>
+
+{% include "devbhoomi/header.njk" %}
+{{ content | safe }}
+{% if modal %}
+{% include "devbhoomi/modal.njk" %}
+{% endif %}
+{% include "devbhoomi/footer.njk" %}
+    <script src="js/main.js"></script>
+</body>
+</html>

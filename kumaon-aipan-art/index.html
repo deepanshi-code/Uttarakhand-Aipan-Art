@@ -1,0 +1,94 @@
+---
+title: "Kumaon Aipan Art | Modern Lifestyle & Local Craft"
+description: "Explore Kumaon Aipan Art: modern eco-friendly home decor, bags, stoles, and festive gifts hand-painted by local women."
+nav: "index"
+modal: true
+---
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <span class="hero-tag">Modern Folk Lifestyle</span>
+                <h1>Bringing Heritage to Modern Living</h1>
+                <p>Earthy terracotta bases, clean white line geometry, and eco-friendly items designed to blend Pahadi tradition with contemporary spaces.</p>
+                <div class="hero-actions">
+                    <a href="products.html" class="btn-primary">Shop Collection</a>
+                    <a href="about.html" class="btn-secondary">Meet Our Artisans</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Our Values</span>
+                    <h2 class="section-title">Earthy. Sustainable. Local.</h2>
+                </div>
+                <div class="grid-3">
+                    <div class="info-card">
+                        <div class="info-card-icon" aria-hidden="true">🌱</div>
+                        <h3>Eco-Friendly Base</h3>
+                        <p>We use natural pine wood, organic cotton canvas, and terracotta clays to create sustainable items that protect the earth.</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-icon" aria-hidden="true">✨</div>
+                        <h3>Modern Adaptation</h3>
+                        <p>We translate ancient temple art motifs onto functional items like coasters, stoles, notebooks, and trays for daily life.</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-icon" aria-hidden="true">👩</div>
+                        <h3>Artisan Hand-painted</h3>
+                        <p>Every product is manually sketched and detailed by women artisans in Kumaoni self-help groups, empowering local lives.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Story Feature Section -->
+        <section class="section section-bg">
+            <div class="container">
+                <div class="grid-2">
+                    <div class="story-details">
+                        <span class="section-tag">Empowering Lives</span>
+                        <h3>Supporting Kumaon's Women Communities</h3>
+                        <p>Kumaon Aipan Art was born with a mission: to create direct socio-economic growth for local women in Uttarakhand. By providing painting workshops and direct access to markets, we help them turn ancestral home skills into digital income streams.</p>
+                        <p>Our designs reflect the crisp mountain landscapes and traditional motifs like the eight-petal lotus and Lakshmi footsteps, adapted into minimal aesthetics for modern homes.</p>
+                        <div class="story-stat-group">
+                            <div class="story-stat">
+                                <h4>50+</h4>
+                                <span>Women Artisans</span>
+                            </div>
+                            <div class="story-stat">
+                                <h4>100%</h4>
+                                <span>Hand-painted</span>
+                            </div>
+                        </div>
+                        <a href="about.html" class="btn-primary" style="display: inline-block; margin-top: 30px;">Our Community Impact</a>
+                    </div>
+                    <div class="story-photo">
+                        <img src="assets/coasters.webp" alt="Aipan Coasters Display" width="800" height="800" loading="lazy" decoding="async">
+                        <div class="story-badge">Direct Sourcing</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Highlight Grid -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Featured Products</span>
+                    <h2 class="section-title">Decorate Your Home</h2>
+                </div>
+                <div class="grid-3">
+                    {% for p in kumaon.products | selectattr("featured") %}
+                        {% include "kumaon/product-card.njk" %}
+                    {% endfor %}
+                </div>
+                <div style="text-align: center; margin-top: 50px;">
+                    <a href="products.html" class="btn-secondary">Browse Full Shop</a>
+                </div>
+            </div>
+        </section>
+    </main>

@@ -1,0 +1,13 @@
+{
+  "name": "msme-aipan-art-sites",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static websites for Devbhoomi Aipan Art and Kumaon Aipan Art, built with Eleventy",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve --port=8765"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.7"
+  }
+}

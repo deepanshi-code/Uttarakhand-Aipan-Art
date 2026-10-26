@@ -1,0 +1,25 @@
+    <!-- Product Detail Modal -->
+    <div class="modal-wrapper" id="product-modal">
+        <div class="modal-inner" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button type="button" class="modal-close" id="close-modal" aria-label="Close product details">&times;</button>
+            <div class="modal-grid">
+                <div class="modal-photo">
+                    <img id="modal-image" src="" alt="">
+                </div>
+                <div class="modal-desc">
+                    <span class="product-meta" id="modal-category"></span>
+                    <h2 id="modal-title"></h2>
+                    <div class="product-price" id="modal-price"></div>
+                    <p id="modal-description"></p>
+                    <div class="modal-actions">
+                        <a href="contact.html" class="modal-btn-submit" style="text-align: center;">Send Inquiry</a>
+                        <!-- TODO: replace with the business's real WhatsApp number (country code, no + or spaces) -->
+                        <a href="#" id="modal-whatsapp" class="whatsapp-btn" data-whatsapp="{{ kumaon.whatsapp }}" target="_blank" rel="noopener">Enquire on WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product details for the popup, generated from _data/kumaon.json -->
+    <script type="application/json" id="product-data">{{ kumaon.products | dump | safe }}</script>

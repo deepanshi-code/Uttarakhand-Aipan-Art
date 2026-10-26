@@ -1,0 +1,37 @@
+---
+title: "Our Catalogue | Devbhoomi Aipan Art"
+description: "Browse our authentic collection of hand-painted Aipan art, including traditional Chowkis, sacred wall frames, and festive decor."
+nav: "products"
+modal: true
+---
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" style="padding: 70px 20px 80px;">
+            <div class="hero-content">
+                <span class="hero-badge">Artisan Showcase</span>
+                <h1>The Handcrafted Collection</h1>
+                <p>Authentic products created with traditional Geru red base and fine white Biswar rice paste detailing. Browse and request custom commissions.</p>
+            </div>
+            <div class="hero-pattern"></div>
+        </section>
+
+        <!-- Catalogue Section -->
+        <section class="section">
+            <div class="container">
+                <!-- Filters -->
+                <div class="filter-tabs">
+                    <button type="button" class="filter-btn active" aria-pressed="true" data-filter="all">All Masterpieces</button>
+                    <button type="button" class="filter-btn" aria-pressed="false" data-filter="chowkis">Ritualistic Chowkis</button>
+                    <button type="button" class="filter-btn" aria-pressed="false" data-filter="wallart">Divine Wall Art</button>
+                    <button type="button" class="filter-btn" aria-pressed="false" data-filter="decor">Sacred Home Decor</button>
+                </div>
+
+                <!-- Product Grid -->
+                <div class="grid-3" id="products-grid">
+                    {% for p in devbhoomi.products %}
+                        {% include "devbhoomi/product-card.njk" %}
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+    </main>

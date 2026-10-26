@@ -1,0 +1,43 @@
+---
+title: "The Shop | Kumaon Aipan Art"
+description: "Explore functional and stylish Aipan products, including wooden coasters, trays, canvas bags, and custom corporate gifts."
+nav: "products"
+modal: true
+---
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" style="padding: 80px 20px 90px;">
+            <div class="hero-content">
+                <span class="hero-tag">Functional Heritage</span>
+                <h1>The Modern Craft Shop</h1>
+                <p>Earthy home decor, premium apparel accessories, and customizable gifting items hand-painted with care by our artisan groups.</p>
+            </div>
+        </section>
+
+        <!-- Catalog Section -->
+        <section class="section">
+            <div class="container">
+                <!-- Search & Filters -->
+                <div class="search-filter-bar">
+                    <div class="search-box">
+                        <span class="search-icon" aria-hidden="true">🔍</span>
+                        <label for="catalog-search" class="visually-hidden">Search products</label>
+                        <input type="search" id="catalog-search" class="search-control" placeholder="Search products (e.g. Coasters, Tray)...">
+                    </div>
+                    <div class="filter-pills">
+                        <button type="button" class="filter-pill active" aria-pressed="true" data-filter="all">All Products</button>
+                        <button type="button" class="filter-pill" aria-pressed="false" data-filter="living">Home & Living</button>
+                        <button type="button" class="filter-pill" aria-pressed="false" data-filter="apparel">Apparel</button>
+                        <button type="button" class="filter-pill" aria-pressed="false" data-filter="gifting">Gifting Sets</button>
+                    </div>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="grid-3" id="products-grid">
+                    {% for p in kumaon.products %}
+                        {% include "kumaon/product-card.njk" %}
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+    </main>

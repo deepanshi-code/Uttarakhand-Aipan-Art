@@ -1,0 +1,5 @@
+node_modules/
+_site/
+
+# Personal file, not part of the project
+deepanshi_generated_resume.pdf
