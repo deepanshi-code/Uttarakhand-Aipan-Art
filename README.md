@@ -99,6 +99,9 @@ If `data-endpoint` is empty, the contact form opens the visitor's email app, add
 
 - [`docs/user-testing-kit.md`](docs/user-testing-kit.md): script, tasks, questionnaire and results sheets for testing with 5 people, plus Lighthouse steps
 - [`docs/report-guide.md`](docs/report-guide.md): report structure, wireframe checklist and pre-submission checks
+- [`docs/project-report.md`](docs/project-report.md): draft report with measured results; user-testing sections still to complete
+- [`docs/expert-review.md`](docs/expert-review.md): heuristic evaluation (17 findings) and Lighthouse before/after
+- [`docs/wireframes.html`](docs/wireframes.html): wireframes of all final pages, desktop and phone (open in a browser)
 
 ## Quality checks already done
 

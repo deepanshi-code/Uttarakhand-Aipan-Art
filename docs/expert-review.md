@@ -58,16 +58,18 @@ Before the performance fixes in finding 12 (second part):
 | Kumaon home | 79 | 100 | 100 | 100 |
 | Kumaon products | 83 | 98 | 100 | 100 |
 
-Total Blocking Time was 0 ms and Cumulative Layout Shift 0 on every page. After the fixes: see the "After" table below.
+Total Blocking Time was 0 ms and Cumulative Layout Shift 0 on every page.
 
 ### After
 
 | Page | Performance | Accessibility | Best Practices | SEO |
 |---|---|---|---|---|
-| Entry page | | | | |
-| Devbhoomi home | | | | |
-| Devbhoomi products | | | | |
-| Kumaon home | | | | |
-| Kumaon products | | | | |
+| Entry page | 88 | 100 | 100 | 100 |
+| Devbhoomi home | 95 | 100 | 100 | 100 |
+| Devbhoomi products | 84 | 100 | 100 | 100 |
+| Kumaon home | 83 | 100 | 100 | 100 |
+| Kumaon products | 98 | 96* | 100 | 100 |
+
+\* The new results line was 4.35:1 contrast (just under 4.5); it was corrected to 6.1:1 straight after this run.
 
 Lighthouse scores vary between runs and machines; Performance is measured with simulated slow-phone conditions.
