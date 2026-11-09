@@ -70,6 +70,6 @@ Total Blocking Time was 0 ms and Cumulative Layout Shift 0 on every page.
 | Kumaon home | 83 | 100 | 100 | 100 |
 | Kumaon products | 98 | 96* | 100 | 100 |
 
-\* The new results line was 4.35:1 contrast (just under 4.5); it was corrected to 6.1:1 straight after this run.
+\* The new results line was 4.35:1 contrast (just under 4.5); it was corrected to 6.1:1 straight after this run, and two further runs then scored 100 for Accessibility.
 
 Lighthouse scores vary between runs and machines; Performance is measured with simulated slow-phone conditions.

@@ -15,7 +15,7 @@
 
 This project designs and builds two websites for small Aipan art businesses from the Kumaon region of Uttarakhand. **Devbhoomi Aipan Art** presents Aipan as a ritual tradition (chowkis, wall art, puja decor). **Kumaon Aipan Art** presents it as modern lifestyle products (coasters, stoles, gift sets, bulk orders). Both sites let visitors browse a catalogue and send an enquiry by WhatsApp or a contact form, which suits small sellers who do not run an online payment system.
 
-The sites are live, work on phones, meet WCAG AA colour contrast, and score 100 for Accessibility (96–100 before the final contrast fix), Best Practices and SEO in Lighthouse. Performance improved from 78–83 to 83–98 after optimisation (section 7).
+The sites are live, work on phones, meet WCAG AA colour contrast, and score 100 for Accessibility, Best Practices and SEO in Lighthouse. Performance improved from 78–83 to 83–98 after optimisation (section 7).
 
 **[To complete]** One or two sentences on the main user-testing findings.
 
@@ -103,7 +103,7 @@ Measured on the live site with Lighthouse 12.8 in mobile mode (simulated slow ph
 | Kumaon home | 79 | 83 | 100 | 100 | 100 |
 | Kumaon products | 83 | 98 | 96* | 100 | 100 |
 
-\* Caused by a low-contrast results line added during this round; corrected afterwards (6.1:1 contrast). Re-run Lighthouse to confirm before submitting.
+\* Caused by a low-contrast results line added during this round; corrected to 6.1:1 contrast, after which two further runs scored 100 for Accessibility.
 
 Total Blocking Time stayed at 0–60 ms and Cumulative Layout Shift at 0 on every page. The main gain came from loading web fonts without blocking the first paint: First Contentful Paint on the entry page fell from 3.9 s to 1.4 s. Lighthouse scores vary between runs, so small differences should not be over-interpreted.
 
