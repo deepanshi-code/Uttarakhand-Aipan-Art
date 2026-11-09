@@ -22,7 +22,7 @@ modal: false
                     <!-- Left: Interactive Form -->
                     <div class="contact-card">
                         <h3>Send Us a Message</h3>
-                        <form id="devbhoomi-contact-form" class="js-contact-form" novalidate data-endpoint="" data-mailto="{{ devbhoomi.contact.emails[0] }}">
+                        <form id="devbhoomi-contact-form" class="js-contact-form" novalidate data-endpoint="{{ devbhoomi.contact.formEndpoint }}" data-mailto="{{ devbhoomi.contact.emails[0] }}">
                             <!-- Spam trap: real visitors never see or fill this field -->
                             <input type="text" name="_gotcha" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
                             <div class="form-group">

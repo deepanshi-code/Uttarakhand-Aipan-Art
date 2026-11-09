@@ -33,6 +33,8 @@ modal: true
                 </div>
 
                 <!-- Products Grid -->
+                <p id="results-status" class="results-status" role="status" aria-live="polite"></p>
+                <h2 class="visually-hidden">Products</h2>
                 <div class="grid-3" id="products-grid">
                     {% for p in kumaon.products %}
                         {% include "kumaon/product-card.njk" %}

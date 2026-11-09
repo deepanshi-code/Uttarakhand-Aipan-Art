@@ -41,6 +41,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const productCards = document.querySelectorAll('.product-card');
 
+    // Say how many products are showing, including when nothing matches (also read out by screen readers)
+    const resultsStatus = document.getElementById('results-status');
+    function updateResultsStatus(query) {
+        if (!resultsStatus) return;
+        const shown = [...productCards].filter(card => card.style.display !== 'none').length;
+        if (shown) {
+            resultsStatus.textContent = `Showing ${shown} of ${productCards.length} products`;
+        } else if (query) {
+            resultsStatus.textContent = `No products match "${query}". Try another word, or choose All Products.`;
+        } else {
+            resultsStatus.textContent = 'No products in this category yet.';
+        }
+        resultsStatus.classList.toggle('is-empty', !shown);
+    }
+    updateResultsStatus();
+
     if (filterButtons.length && productCards.length) {
         filterButtons.forEach(btn => {
             btn.addEventListener('click', () => {
@@ -64,6 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         card.style.display = 'none';
                     }
                 });
+                updateResultsStatus();
             });
         });
     }
@@ -88,6 +105,12 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('modal-description').innerText = data.description;
         document.getElementById('modal-image').src = data.img + '-800.webp';
         document.getElementById('modal-image').alt = data.title;
+
+        // Contact page link carries the product, so the form is filled in on arrival
+        const inquireLink = modal.querySelector('.modal-actions a[href^="contact.html"]');
+        if (inquireLink) {
+            inquireLink.href = `contact.html?product=${encodeURIComponent(`${data.title} (${data.price})`)}`;
+        }
 
         // WhatsApp link pre-filled with the product name and price
         const whatsappBtn = document.getElementById('modal-whatsapp');
@@ -151,6 +174,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // and paste its URL into the form's data-endpoint attribute in the HTML.
     // Until then, the contact form opens the visitor's email app addressed to data-mailto.
     const contactForm = document.querySelector('.js-contact-form');
+    const enquiredProduct = new URLSearchParams(window.location.search).get('product');
+    if (contactForm && enquiredProduct) {
+        const subject = document.getElementById('subject');
+        const type = document.getElementById('inquiry-type');
+        const message = document.getElementById('message');
+        if (subject) subject.value = `Enquiry: ${enquiredProduct}`;
+        if (type && !type.value) type.value = 'retail';
+        if (message && !message.value) message.value = `Hello, I'd like to know more about the ${enquiredProduct}. `;
+    }
     if (contactForm) {
         contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();

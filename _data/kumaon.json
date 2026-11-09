@@ -1,7 +1,7 @@
 {
   "_comment": "Edit products here; the cards, the home-page features and the product popup are all built from this list. img is a base path: the site loads img-480.webp and img-800.webp.",
   "contact": {
-    "_comment": "Demo values that cannot reach anyone: .example email domains are reserved and the phone number is all zeros. An empty whatsapp opens WhatsApp's chat picker with the message filled in. Replace everything here with the business's real details before launch; social icons appear once a URL is set.",
+    "_comment": "Demo values that cannot reach anyone: .example email domains are reserved and the phone number is all zeros. An empty whatsapp opens WhatsApp's chat picker with the message filled in. Replace everything here with the business's real details before launch; social icons appear once a URL is set. formEndpoint: a Formspree (or similar) URL for the contact form; empty = open the visitor's email app. newsletterEndpoint: URL for newsletter sign-ups; empty = show 'launching soon' instead of the form.",
     "whatsapp": "",
     "phone": "+91 00000 00000",
     "hours": "Mon-Sat: 10:00 AM - 5:00 PM IST",
@@ -18,7 +18,9 @@
       "facebook": "",
       "instagram": "",
       "youtube": ""
-    }
+    },
+    "formEndpoint": "",
+    "newsletterEndpoint": ""
   },
   "products": [
     {

@@ -21,7 +21,7 @@ modal: false
                     <!-- Left: Form -->
                     <div class="form-card">
                         <h3>Send an Inquiry</h3>
-                        <form id="kumaon-contact-form" class="js-contact-form" novalidate data-endpoint="" data-mailto="{{ kumaon.contact.emails[0] }}">
+                        <form id="kumaon-contact-form" class="js-contact-form" novalidate data-endpoint="{{ kumaon.contact.formEndpoint }}" data-mailto="{{ kumaon.contact.emails[0] }}">
                             <!-- Spam trap: real visitors never see or fill this field -->
                             <input type="text" name="_gotcha" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
                             <div class="form-group">
