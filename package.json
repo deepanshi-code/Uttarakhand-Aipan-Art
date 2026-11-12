@@ -5,9 +5,17 @@
   "description": "Static websites for Devbhoomi Aipan Art and Kumaon Aipan Art, built with Eleventy",
   "scripts": {
     "build": "eleventy",
-    "serve": "eleventy --serve --port=8765"
+    "serve": "eleventy --serve --port=8765",
+    "check:html": "html-validate \"_site/**/*.html\"",
+    "check:links": "linkinator _site --recurse --skip \"^https?://(?!localhost)\" --skip \"/Uttarakhand-Aipan-Art/\"",
+    "check:a11y": "node scripts/check-a11y.mjs",
+    "check": "npm run check:html && npm run check:links && npm run check:a11y"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.7"
+    "@11ty/eleventy": "^3.1.7",
+    "axe-core": "^4.8.4",
+    "html-validate": "^9.7.1",
+    "linkinator": "^6.3.0",
+    "puppeteer": "^22.15.0"
   }
 }
