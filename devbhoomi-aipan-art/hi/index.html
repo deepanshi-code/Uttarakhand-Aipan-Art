@@ -1,0 +1,87 @@
+---
+title: "देवभूमि ऐपण कला | उत्तराखंड की पवित्र लोक कला"
+description: "स्थानीय कुमाऊँनी महिलाओं द्वारा हाथ से बनाई गई प्रामाणिक ऐपण चौकियों, दीवार कला और गृह सज्जा के माध्यम से उत्तराखंड की आध्यात्मिक विरासत को जानिए।"
+nav: "index"
+modal: true
+---
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <span class="hero-badge">पवित्र परंपराओं का संरक्षण</span>
+                <h1>देवभूमि की दिव्य कला</h1>
+                <p>प्रामाणिक, हस्तनिर्मित ऐपण कला के साथ आपके घर तक शुभता, सकारात्मक ऊर्जा और पारंपरिक कुमाऊँनी शिल्प।</p>
+                <div class="hero-buttons">
+                    <a href="products.html" class="btn-primary">संग्रह देखें</a>
+                    <a href="about.html" class="btn-secondary">हमारी कहानी जानें</a>
+                </div>
+            </div>
+            <div class="hero-pattern"></div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">देवभूमि ही क्यों</span>
+                    <h2 class="section-title">हमारे शिल्प का सार</h2>
+                </div>
+                <div class="grid-3">
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">ॐ</div>
+                        <h3>पवित्र ज्यामिति</h3>
+                        <p>हर आकृति का गहरा आध्यात्मिक अर्थ है, और इसे पीढ़ियों से चले आ रहे विशेष ज्यामितीय नियमों से बनाया जाता है।</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">✿</div>
+                        <h3>शुद्ध सामग्री</h3>
+                        <p>प्रामाणिक शुद्धता बनाए रखने के लिए पारंपरिक रूप से लाल मिट्टी (गेरू) और चावल के लेप (बिस्वार) से चित्रित।</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">{% icon "users" %}</div>
+                        <h3>सशक्त कारीगर</h3>
+                        <p>कुमाऊँ की स्थानीय महिला कारीगरों से सीधे प्राप्त, जिससे उन्हें सीधी आर्थिक स्वतंत्रता और प्रगति मिलती है।</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Story Teaser Section -->
+        <section class="section section-bg">
+            <div class="container">
+                <div class="grid-2">
+                    <div class="story-image">
+                        <img src="../assets/photos/shubh-labh-floor-800.webp" srcset="../assets/photos/shubh-labh-floor-480.webp 480w, ../assets/photos/shubh-labh-floor-800.webp 800w" sizes="(max-width: 768px) 100vw, 560px" alt="तारे वाले मंडल और ‘शुभ लाभ’ शब्दों के साथ फ़र्श पर बना ऐपण" width="800" height="762" loading="lazy" decoding="async">
+                    </div>
+                    <div class="story-text">
+                        <span class="section-subtitle">हमारी विरासत</span>
+                        <h3>हिमालय में रची-बसी लोक कला</h3>
+                        <p>ऐपण उत्तराखंड के कुमाऊँ क्षेत्र की एक पारंपरिक अनुष्ठानिक लोक कला है। यह मुख्य रूप से दरवाज़ों, आँगनों और घर के प्रवेश द्वारों पर बनाई जाती है, और शांति, समृद्धि तथा ब्रह्मांडीय संतुलन का प्रतीक है।</p>
+                        <p>देवभूमि ऐपण कला में हम इस प्राचीन विरासत को जीवित रखते हैं। हर कृति श्रद्धा से बनाई जाती है: ब्रह्मांड के प्रतीक केंद्रीय बिंदु से शुरू होकर यह बारीक मंडलों और प्रकृति से प्रेरित किनारों तक फैलती है।</p>
+                        <div class="highlight-quote">
+                            “ऐपण केवल एक चित्र नहीं है; यह धरती पर उकेरी गई एक प्रार्थना है, जो सकारात्मक ऊर्जा का स्वागत करती है।”
+                        </div>
+                        <a href="about.html" class="btn-primary" style="display: inline-block;">हमारी पूरी कहानी पढ़ें</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">चुनिंदा कृतियाँ</span>
+                    <h2 class="section-title">विशेष संग्रह</h2>
+                </div>
+                <div class="grid-3">
+                    {% for p in devbhoomi.products | localize(lang) | selectattr("featured") %}
+                        {% include "devbhoomi/product-card.njk" %}
+                    {% endfor %}
+                </div>
+                <div style="text-align: center; margin-top: 50px;">
+                    <a href="products.html" class="btn-secondary" style="color: var(--primary-color); border-color: var(--primary-color);">सभी उत्पाद देखें</a>
+                </div>
+            </div>
+        </section>
+    </main>

@@ -1,4 +1,8 @@
 {
   "layout": "kumaon.njk",
-  "permalink": "{{ page.filePathStem }}.html"
+  "permalink": "{{ page.filePathStem }}.html",
+  "lang": "en",
+  "base": "",
+  "siteDir": "kumaon-aipan-art",
+  "i18nKey": "kumaon"
 }

@@ -1,0 +1,45 @@
+---
+title: "दुकान | कुमाऊँ ऐपण कला"
+description: "लकड़ी के कोस्टर, ट्रे, कैनवास बैग और विशेष कॉर्पोरेट उपहारों सहित उपयोगी और आकर्षक ऐपण उत्पाद देखें।"
+nav: "products"
+modal: true
+---
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" style="padding: 80px 20px 90px;">
+            <div class="hero-content">
+                <span class="hero-tag">उपयोगी विरासत</span>
+                <h1>आधुनिक शिल्प दुकान</h1>
+                <p>प्राकृतिक गृह सज्जा, बेहतरीन परिधान सहायक सामग्री और मनचाहे उपहार, जिन्हें हमारे कारीगर समूह ध्यान से हाथ से बनाते हैं।</p>
+            </div>
+        </section>
+
+        <!-- Catalog Section -->
+        <section class="section">
+            <div class="container">
+                <!-- Search & Filters -->
+                <div class="search-filter-bar">
+                    <div class="search-box">
+                        <span class="search-icon" aria-hidden="true">{% icon "search" %}</span>
+                        <label for="catalog-search" class="visually-hidden">उत्पाद खोजें</label>
+                        <input type="search" id="catalog-search" class="search-control" placeholder="उत्पाद खोजें (जैसे कोस्टर, ट्रे)...">
+                    </div>
+                    <div class="filter-pills">
+                        <button type="button" class="filter-pill active" aria-pressed="true" data-filter="all">सभी उत्पाद</button>
+                        <button type="button" class="filter-pill" aria-pressed="false" data-filter="living">घर और जीवन</button>
+                        <button type="button" class="filter-pill" aria-pressed="false" data-filter="apparel">परिधान</button>
+                        <button type="button" class="filter-pill" aria-pressed="false" data-filter="gifting">उपहार सेट</button>
+                    </div>
+                </div>
+
+                <!-- Products Grid -->
+                <p id="results-status" class="results-status" role="status" aria-live="polite"></p>
+                <h2 class="visually-hidden">उत्पाद</h2>
+                <div class="grid-3" id="products-grid">
+                    {% for p in kumaon.products | localize(lang) %}
+                        {% include "kumaon/product-card.njk" %}
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+    </main>

@@ -83,6 +83,8 @@ Wireframes of all 12 final page layouts, at desktop and phone size, are in `docs
 |---|---|
 | Structure | HTML, CSS and JavaScript, assembled by the Eleventy static site generator; shared header, footer, product card and popup templates; product and contact data in one JSON file per site |
 | Hosting | GitHub Pages, rebuilt automatically by GitHub Actions on every push |
+| Quality checks | Every push is checked for valid HTML (html-validate), broken links (linkinator) and WCAG 2.1 AA accessibility (axe-core) before publishing; a failed check blocks the deploy |
+| Languages | Every page in English and Hindi, with a language switch in each header; Devanagari fonts (Noto Sans and Noto Serif Devanagari) on Hindi pages. Hindi text needs review by a fluent speaker. |
 | Images | 17 crops of 6 openly licensed Wikimedia Commons photographs (CC BY-SA 4.0), credited on each site's Photo credits page; WebP at 480 and 800 px; one AI-generated sample image (coasters), labelled as such |
 | Accessibility | Keyboard-operable menu and product popup (Escape closes, focus is kept inside and returned afterwards); labelled form fields; status messages announced to screen readers; one `h1` per page; WCAG AA colour contrast; reduced motion respected |
 | Performance | Compressed WebP images with lazy loading; animations limited to inexpensive properties; fonts loaded without blocking the first paint; hero image preloaded; scripts deferred |
@@ -156,6 +158,7 @@ An expert review is not a substitute for testing with users.
 - Add product details buyers need: size, material, care, delivery time, returns
 - Share one stylesheet and script between the two sites
 - Re-test with users after each round of changes
+- Have the Hindi text reviewed by fluent speakers, ideally artisans or local buyers
 
 ## References
 

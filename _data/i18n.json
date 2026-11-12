@@ -1,0 +1,133 @@
+{
+  "_comment": "Interface text used by the templates in _includes/, in English (en) and Hindi (hi). Page content lives in each page file; Hindi pages are in <site>/hi/.",
+  "shared": {
+    "en": {
+      "banner": "Demo site for a student project: products, prices, figures, contact details and artisan profiles are sample content.",
+      "aipanArt": "Aipan Art",
+      "openMenu": "Open menu",
+      "nav": { "index": "Home", "about": "About Us", "products": "Products", "gallery": "Gallery", "contact": "Contact Us" },
+      "langSwitch": "हिन्दी",
+      "langSwitchLang": "hi",
+      "langSwitchLabel": "हिन्दी में देखें (View in Hindi)",
+      "opensNewTab": "(opens in a new tab)",
+      "productDetails": "Product details",
+      "closeDetails": "Close product details",
+      "whatsapp": "Enquire on WhatsApp",
+      "newsletterSoon": "Our newsletter is launching soon.",
+      "newsletterEmailLabel": "Email address for newsletter",
+      "emailPlaceholder": "Your Email Address",
+      "photoCredits": "Photo credits",
+      "allSites": "All Aipan sites",
+      "credits": {
+        "intro": "Photos on this site are crops of openly licensed images from Wikimedia Commons. Each was cropped, resized and converted to WebP, and is shared under the same licence,",
+        "by": "by",
+        "usedFor": "Used for:",
+        "aiCoaster": "The wooden coasters image is an AI-generated sample, not a photo of a real product.",
+        "icons": "Icons are from",
+        "iconsLicence": "(ISC licence)."
+      }
+    },
+    "hi": {
+      "banner": "छात्र परियोजना के लिए डेमो साइट: उत्पाद, दाम, आँकड़े, संपर्क विवरण और कारीगरों की जानकारी नमूना सामग्री है।",
+      "aipanArt": "ऐपण कला",
+      "openMenu": "मेनू खोलें",
+      "nav": { "index": "मुख्य पृष्ठ", "about": "हमारे बारे में", "products": "उत्पाद", "gallery": "चित्र दीर्घा", "contact": "संपर्क करें" },
+      "langSwitch": "English",
+      "langSwitchLang": "en",
+      "langSwitchLabel": "View in English (अंग्रेज़ी में देखें)",
+      "opensNewTab": "(नए टैब में खुलता है)",
+      "productDetails": "उत्पाद विवरण",
+      "closeDetails": "उत्पाद विवरण बंद करें",
+      "whatsapp": "व्हाट्सऐप पर पूछें",
+      "newsletterSoon": "हमारा न्यूज़लेटर जल्द शुरू होगा।",
+      "newsletterEmailLabel": "न्यूज़लेटर के लिए ईमेल पता",
+      "emailPlaceholder": "आपका ईमेल पता",
+      "photoCredits": "फ़ोटो आभार",
+      "allSites": "सभी ऐपण साइटें",
+      "credits": {
+        "intro": "इस साइट की तस्वीरें विकिमीडिया कॉमन्स की खुले लाइसेंस वाली तस्वीरों के हिस्से हैं। हर तस्वीर को काटा, छोटा किया और WebP में बदला गया है, और यह उसी लाइसेंस के तहत साझा की गई है:",
+        "by": "द्वारा",
+        "usedFor": "इनमें उपयोग:",
+        "aiCoaster": "लकड़ी के कोस्टर की तस्वीर AI से बनाया गया नमूना है, किसी असली उत्पाद की तस्वीर नहीं।",
+        "icons": "आइकन यहाँ से लिए गए हैं:",
+        "iconsLicence": "(ISC लाइसेंस)।"
+      }
+    }
+  },
+  "devbhoomi": {
+    "en": {
+      "name": "Devbhoomi",
+      "siteName": "Devbhoomi Aipan Art",
+      "cta": "Book Custom Art",
+      "viewDetails": "View Details",
+      "inquire": "Inquire Now",
+      "footerText": "Preserving, sharing, and honoring the sacred Aipan art heritage of the Kumaon region in Uttarakhand.",
+      "quickLinks": "Quick Links",
+      "linkCatalogue": "Catalogue",
+      "categoriesTitle": "Our Categories",
+      "categories": ["Ritualistic Chowkis", "Divine Wall Art", "Sacred Home Decor"],
+      "newsletterTitle": "Newsletter",
+      "newsletterText": "Receive updates about our artisan workshops and seasonal collections.",
+      "subscribe": "Subscribe",
+      "copyright": "2026 Devbhoomi Aipan Art. All Rights Reserved. Crafted from scratch.",
+      "tagline": "Made with Pride in Uttarakhand"
+    },
+    "hi": {
+      "name": "देवभूमि",
+      "siteName": "देवभूमि ऐपण कला",
+      "cta": "विशेष कलाकृति बुक करें",
+      "viewDetails": "विवरण देखें",
+      "inquire": "अभी पूछें",
+      "footerText": "उत्तराखंड के कुमाऊँ क्षेत्र की पवित्र ऐपण कला की विरासत का संरक्षण, प्रसार और सम्मान।",
+      "quickLinks": "उपयोगी लिंक",
+      "linkCatalogue": "संग्रह",
+      "categoriesTitle": "हमारी श्रेणियाँ",
+      "categories": ["पूजा की चौकियाँ", "दिव्य दीवार कला", "पवित्र गृह सज्जा"],
+      "newsletterTitle": "न्यूज़लेटर",
+      "newsletterText": "हमारी कारीगर कार्यशालाओं और मौसमी संग्रहों की जानकारी पाएँ।",
+      "subscribe": "सदस्य बनें",
+      "copyright": "2026 देवभूमि ऐपण कला। सर्वाधिकार सुरक्षित।",
+      "tagline": "उत्तराखंड में गर्व से बनाया गया"
+    }
+  },
+  "kumaon": {
+    "en": {
+      "name": "Kumaon",
+      "siteName": "Kumaon Aipan Art",
+      "cta": "Bulk Inquiries",
+      "viewDetails": "Quick View",
+      "inquire": "Send Inquiry",
+      "footerText": "Empowering local women artisans of Kumaon by bringing traditional Aipan art into modern lifestyles.",
+      "shopTitle": "Shop",
+      "shopLinks": ["Home & Living", "Apparel & Accessories", "Gift Hampers"],
+      "companyTitle": "Company",
+      "linkMission": "Our Mission",
+      "linkGallery": "Aipan Gallery",
+      "linkBulk": "Bulk Inquiries",
+      "newsletterTitle": "Keep In Touch",
+      "newsletterText": "Sign up to receive news about our training campaigns and product launches.",
+      "subscribe": "Join",
+      "copyright": "2026 Kumaon Aipan Art. All Rights Reserved. Crafted from scratch.",
+      "tagline": "Empowering Mountain Communities"
+    },
+    "hi": {
+      "name": "कुमाऊँ",
+      "siteName": "कुमाऊँ ऐपण कला",
+      "cta": "थोक पूछताछ",
+      "viewDetails": "झलक देखें",
+      "inquire": "पूछताछ भेजें",
+      "footerText": "पारंपरिक ऐपण कला को आधुनिक जीवनशैली तक पहुँचाकर कुमाऊँ की स्थानीय महिला कारीगरों का सशक्तिकरण।",
+      "shopTitle": "दुकान",
+      "shopLinks": ["घर और जीवन", "परिधान और सहायक सामग्री", "उपहार हैम्पर"],
+      "companyTitle": "संस्था",
+      "linkMission": "हमारा उद्देश्य",
+      "linkGallery": "ऐपण चित्र दीर्घा",
+      "linkBulk": "थोक पूछताछ",
+      "newsletterTitle": "जुड़े रहें",
+      "newsletterText": "हमारे प्रशिक्षण अभियानों और नए उत्पादों की जानकारी पाने के लिए जुड़ें।",
+      "subscribe": "जुड़ें",
+      "copyright": "2026 कुमाऊँ ऐपण कला। सर्वाधिकार सुरक्षित।",
+      "tagline": "पहाड़ी समुदायों का सशक्तिकरण"
+    }
+  }
+}

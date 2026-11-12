@@ -20,7 +20,14 @@
       "youtube": ""
     },
     "formEndpoint": "",
-    "newsletterEndpoint": ""
+    "newsletterEndpoint": "",
+    "hi": {
+      "address": [
+        "आर्टिज़न गिल्ड रोड, अल्मोड़ा,",
+        "उत्तराखंड - 263601, भारत"
+      ],
+      "hours": "सोम-शनि: सुबह 9:00 - शाम 6:00 बजे"
+    }
   },
   "products": [
     {
@@ -33,7 +40,14 @@
       "category": "Ritualistic Chowki",
       "img": "assets/photos/om-chowki",
       "description": "Traditionally painted for initiation rites and seeking wisdom. This Chowki features the geometric Saraswati symbol in the center, encircled by traditional white lines (Biswar) over an auspicious red Geru base. Ideal for study rooms, libraries, and spiritual settings.",
-      "featured": true
+      "featured": true,
+      "hi": {
+        "title": "सरस्वती चौकी",
+        "category": "पूजा की चौकी",
+        "label": "पूजा की चौकी",
+        "tag": "पवित्र",
+        "description": "विद्यारंभ संस्कार और ज्ञान की कामना के लिए पारंपरिक रूप से बनाई जाने वाली चौकी। इसके केंद्र में सरस्वती का ज्यामितीय प्रतीक है, जिसे शुभ लाल गेरू के आधार पर पारंपरिक सफ़ेद बिस्वार रेखाएँ घेरती हैं। अध्ययन कक्ष, पुस्तकालय और आध्यात्मिक स्थानों के लिए उपयुक्त।"
+      }
     },
     {
       "id": "lakshmi-yantra",
@@ -45,7 +59,14 @@
       "category": "Ritualistic Chowki",
       "img": "assets/photos/feet-medallion",
       "description": "Invites wealth, prosperity, and joy into your home. Features the symbolic footprints of Goddess Lakshmi pointing inward (symbolizing arrival) surrounded by detailed geometric border designs and auspicious lotuses.",
-      "featured": true
+      "featured": true,
+      "hi": {
+        "title": "देवी लक्ष्मी चौकी",
+        "category": "पूजा की चौकी",
+        "label": "पूजा की चौकी",
+        "tag": "लोकप्रिय",
+        "description": "घर में धन, समृद्धि और खुशियों को आमंत्रित करती है। इसमें अंदर की ओर आते देवी लक्ष्मी के प्रतीकात्मक पदचिह्न (आगमन का प्रतीक) हैं, जिनके चारों ओर बारीक ज्यामितीय किनारे और शुभ कमल बने हैं।"
+      }
     },
     {
       "id": "swastika-chowki",
@@ -57,7 +78,14 @@
       "category": "Ritualistic Chowki",
       "img": "assets/photos/star-mandala",
       "description": "A symbol of positive energies and good fortune. This wooden Chowki is coated with authentic Geru clay and hand-painted with standard rice paste patterns. Used widely in all traditional festivals and home worships.",
-      "featured": false
+      "featured": false,
+      "hi": {
+        "title": "शुभ स्वस्तिक चौकी",
+        "category": "पूजा की चौकी",
+        "label": "पूजा की चौकी",
+        "tag": "पारंपरिक",
+        "description": "सकारात्मक ऊर्जा और सौभाग्य का प्रतीक। लकड़ी की इस चौकी पर असली गेरू का लेप है और इसे चावल के लेप की पारंपरिक आकृतियों से हाथ से सजाया गया है। सभी पारंपरिक त्योहारों और घर की पूजा में व्यापक रूप से उपयोग होती है।"
+      }
     },
     {
       "id": "vasudhara-wall-art",
@@ -69,7 +97,14 @@
       "category": "Divine Wall Art",
       "img": "assets/photos/border-top",
       "description": "Vasudhara represents streaming wealth and blessings. Hand-drawn by local Kumaoni women artisans, this framed masterpiece features vertical parallel lines representing streaming abundance, bounded by intricate Aipan borders.",
-      "featured": true
+      "featured": true,
+      "hi": {
+        "title": "वसुधारा विरासत चित्र",
+        "category": "दिव्य दीवार कला",
+        "label": "दिव्य दीवार कला",
+        "tag": "विरासत",
+        "description": "वसुधारा बहते धन और आशीर्वाद का प्रतीक है। स्थानीय कुमाऊँनी महिला कारीगरों द्वारा हाथ से बनाई गई इस फ़्रेम की हुई कृति में बहती समृद्धि को दर्शाती खड़ी समानांतर रेखाएँ हैं, जिन्हें बारीक ऐपण किनारे घेरते हैं।"
+      }
     },
     {
       "id": "ashtadal-kamal-art",
@@ -81,7 +116,14 @@
       "category": "Divine Wall Art",
       "img": "assets/photos/wall-leaves",
       "description": "A beautiful rendering of the sacred eight-petaled lotus (Ashtadal Kamal). A symbol of purity and cosmic order, this painting brings serene energies and serves as a premium aesthetic accent for home entrances.",
-      "featured": false
+      "featured": false,
+      "hi": {
+        "title": "अष्टदल कमल दीवार फ़्रेम",
+        "category": "दिव्य दीवार कला",
+        "label": "दिव्य दीवार कला",
+        "tag": "नया",
+        "description": "पवित्र आठ पंखुड़ियों वाले कमल (अष्टदल कमल) का सुंदर चित्रण। पवित्रता और ब्रह्मांडीय व्यवस्था का प्रतीक यह चित्र शांत ऊर्जा लाता है और घर के प्रवेश द्वार की शोभा बढ़ाता है।"
+      }
     },
     {
       "id": "pooja-thali",
@@ -93,7 +135,14 @@
       "category": "Sacred Home Decor",
       "img": "assets/photos/round-floor",
       "description": "A stainless-steel base thali treated and hand-decorated with high-durability waterproof Aipan-inspired patterns. Perfect for festivals like Diwali, Karwa Chauth, or daily worship rituals.",
-      "featured": false
+      "featured": false,
+      "hi": {
+        "title": "हाथ से सजी पूजा थाली",
+        "category": "पवित्र गृह सज्जा",
+        "label": "पवित्र गृह सज्जा",
+        "tag": "सज्जा",
+        "description": "स्टेनलेस स्टील की थाली, जिसे टिकाऊ और जलरोधी ऐपण-प्रेरित आकृतियों से हाथ से सजाया गया है। दीवाली, करवा चौथ या रोज़ की पूजा के लिए उपयुक्त।"
+      }
     },
     {
       "id": "glowing-diyas",
@@ -105,7 +154,14 @@
       "category": "Sacred Home Decor",
       "img": "assets/photos/painted-pot",
       "description": "A set of 6 traditional clay diyas hand-plastered with Geru and decorated with detailed white rice-paste creepers. Includes natural wax fillings. A lovely eco-friendly festive decor piece.",
-      "featured": false
+      "featured": false,
+      "hi": {
+        "title": "ऐपण सजे दीयों का सेट",
+        "category": "पवित्र गृह सज्जा",
+        "label": "पवित्र गृह सज्जा",
+        "tag": "त्योहार",
+        "description": "मिट्टी के 6 पारंपरिक दीयों का सेट, जिन पर हाथ से गेरू का लेप है और जिन्हें चावल के सफ़ेद लेप की बारीक बेलों से सजाया गया है। प्राकृतिक मोम भरा हुआ। त्योहारों के लिए पर्यावरण-अनुकूल सुंदर सजावट।"
+      }
     }
   ]
 }

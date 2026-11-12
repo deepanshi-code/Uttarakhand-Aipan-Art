@@ -1,6 +1,51 @@
 // Kumaon Aipan Art - Main JavaScript
 
 document.addEventListener('DOMContentLoaded', () => {
+
+    // Interface text in the page's language (Hindi pages have <html lang="hi">)
+    const LANG = document.documentElement.lang === 'hi' ? 'hi' : 'en';
+    // Hindi pages live one folder down, so asset paths need "../"
+    const BASE = document.documentElement.dataset.base || '';
+    const T = {
+        en: {
+            openMenu: 'Open menu',
+            closeMenu: 'Close menu',
+            showing: (shown, total) => `Showing ${shown} of ${total} products`,
+            noMatch: (query) => `No products match "${query}". Try another word, or choose All Products.`,
+            emptyCategory: 'No products in this category yet.',
+            whatsappText: (title, price) => `Hi! I am interested in the ${title} (${price}). Is it available?`,
+            whatsappLabel: (title) => `Enquire on WhatsApp about ${title} (opens in a new tab)`,
+            enquirySubject: (product) => `Enquiry: ${product}`,
+            enquiryMessage: (product) => `Hello, I'd like to know more about the ${product}. `,
+            inquirySubject: (type) => `Inquiry: ${type}`,
+            fillAll: 'Please fill out all the fields.',
+            invalidEmail: 'Please enter a valid email address.',
+            emailApp: 'Your email app should open with this message ready to send.',
+            sent: 'Thank you! Your message has been sent. We will reach out shortly.',
+            newsletterClosed: 'Newsletter sign-up is not open yet. Please check back soon.',
+            subscribed: 'Success! You have subscribed to our updates.',
+            sendFailed: 'Sorry, your message could not be sent. Please email us directly.',
+        },
+        hi: {
+            openMenu: 'मेनू खोलें',
+            closeMenu: 'मेनू बंद करें',
+            showing: (shown, total) => `कुल ${total} में से ${shown} उत्पाद दिख रहे हैं`,
+            noMatch: (query) => `"${query}" से जुड़ा कोई उत्पाद नहीं मिला। कोई दूसरा शब्द आज़माएँ, या सभी उत्पाद चुनें।`,
+            emptyCategory: 'इस श्रेणी में अभी कोई उत्पाद नहीं है।',
+            whatsappText: (title, price) => `नमस्ते! मुझे ${title} (${price}) में रुचि है। क्या यह उपलब्ध है?`,
+            whatsappLabel: (title) => `${title} के बारे में व्हाट्सऐप पर पूछें (नए टैब में खुलता है)`,
+            enquirySubject: (product) => `पूछताछ: ${product}`,
+            enquiryMessage: (product) => `नमस्ते, मुझे ${product} के बारे में और जानकारी चाहिए। `,
+            inquirySubject: (type) => `पूछताछ: ${type}`,
+            fillAll: 'कृपया सभी जानकारी भरें।',
+            invalidEmail: 'कृपया सही ईमेल पता लिखें।',
+            emailApp: 'संदेश भेजने के लिए आपका ईमेल ऐप खुलेगा, जिसमें यह संदेश पहले से लिखा होगा।',
+            sent: 'धन्यवाद! आपका संदेश भेज दिया गया है। हम जल्द ही आपसे संपर्क करेंगे।',
+            newsletterClosed: 'न्यूज़लेटर के लिए पंजीकरण अभी शुरू नहीं हुआ है। कृपया बाद में देखें।',
+            subscribed: 'धन्यवाद! आपने हमारे अपडेट पाने के लिए सदस्यता ले ली है।',
+            sendFailed: 'क्षमा करें, आपका संदेश नहीं भेजा जा सका। कृपया हमें सीधे ईमेल करें।',
+        },
+    }[LANG];
     // 1. Mobile Navigation Toggle
     const menuToggle = document.getElementById('menu-toggle');
     const navLinks = document.getElementById('nav-links');
@@ -9,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!menuToggle || !navLinks) return;
         navLinks.classList.toggle('active', open);
         menuToggle.setAttribute('aria-expanded', String(open));
-        menuToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        menuToggle.setAttribute('aria-label', open ? T.closeMenu : T.openMenu);
 
         // Animate hamburger bars into an X
         const bars = menuToggle.querySelectorAll('span');
@@ -48,11 +93,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!resultsStatus) return;
         const shown = [...productCards].filter(card => card.style.display !== 'none').length;
         if (shown) {
-            resultsStatus.textContent = `Showing ${shown} of ${productCards.length} products`;
+            resultsStatus.textContent = T.showing(shown, productCards.length);
         } else if (query) {
-            resultsStatus.textContent = `No products match "${query}". Try another word, or choose All Products.`;
+            resultsStatus.textContent = T.noMatch(query);
         } else {
-            resultsStatus.textContent = 'No products in this category yet.';
+            resultsStatus.textContent = T.emptyCategory;
         }
         resultsStatus.classList.toggle('is-empty', !shown);
     }
@@ -121,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('modal-category').innerText = data.category;
         document.getElementById('modal-price').innerText = data.price;
         document.getElementById('modal-description').innerText = data.description;
-        document.getElementById('modal-image').src = data.img + '-800.webp';
+        document.getElementById('modal-image').src = BASE + data.img + '-800.webp';
         document.getElementById('modal-image').alt = data.title;
 
         // Contact page link carries the product, so the form is filled in on arrival
@@ -133,10 +178,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // WhatsApp link pre-filled with the product name and price
         const whatsappBtn = document.getElementById('modal-whatsapp');
         if (whatsappBtn) {
-            const text = `Hi! I am interested in the ${data.title} (${data.price}). Is it available?`;
+            const text = T.whatsappText(data.title, data.price);
             // No number configured (demo): wa.me without a number lets the visitor pick the chat
             whatsappBtn.href = `https://wa.me/${whatsappBtn.dataset.whatsapp || ''}?text=${encodeURIComponent(text)}`;
-            whatsappBtn.setAttribute('aria-label', `Enquire on WhatsApp about ${data.title} (opens in a new tab)`);
+            whatsappBtn.setAttribute('aria-label', T.whatsappLabel(data.title));
         }
 
         lastFocused = document.activeElement;
@@ -197,9 +242,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const subject = document.getElementById('subject');
         const type = document.getElementById('inquiry-type');
         const message = document.getElementById('message');
-        if (subject) subject.value = `Enquiry: ${enquiredProduct}`;
+        if (subject) subject.value = T.enquirySubject(enquiredProduct);
         if (type && !type.value) type.value = 'retail';
-        if (message && !message.value) message.value = `Hello, I'd like to know more about the ${enquiredProduct}. `;
+        if (message && !message.value) message.value = T.enquiryMessage(enquiredProduct);
     }
     if (contactForm) {
         contactForm.addEventListener('submit', async (e) => {
@@ -210,28 +255,28 @@ document.addEventListener('DOMContentLoaded', () => {
             if (_gotcha) return; // Spam bot filled the hidden field
 
             if (Object.values(entries).some(v => !String(v).trim())) {
-                showToast('Please fill out all the fields.', 'error');
+                showToast(T.fillAll, 'error');
                 return;
             }
 
             if (!validateEmail(entries.email.trim())) {
-                showToast('Please enter a valid email address.', 'error');
+                showToast(T.invalidEmail, 'error');
                 document.getElementById('email').focus();
                 return;
             }
 
             const endpoint = contactForm.dataset.endpoint;
             if (!endpoint) {
-                const subject = entries.subject || `Inquiry: ${entries['inquiry-type']}`;
+                const subject = entries.subject || T.inquirySubject(entries['inquiry-type']);
                 const body = `${entries.message}\n\nFrom: ${entries.name} <${entries.email}>`;
                 window.location.href = `mailto:${contactForm.dataset.mailto}`
                     + `?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-                showToast('Your email app should open with this message ready to send.', 'success');
+                showToast(T.emailApp, 'success');
                 return;
             }
 
             if (await submitForm(contactForm, endpoint, fields)) {
-                showToast('Thank you! Your message has been sent. We will reach out shortly.', 'success');
+                showToast(T.sent, 'success');
                 contactForm.reset();
             }
         });
@@ -245,18 +290,18 @@ document.addEventListener('DOMContentLoaded', () => {
             const email = emailInput.value.trim();
 
             if (!validateEmail(email)) {
-                showToast('Please enter a valid email address.', 'error');
+                showToast(T.invalidEmail, 'error');
                 return;
             }
 
             const endpoint = newsletterForm.dataset.endpoint;
             if (!endpoint) {
-                showToast('Newsletter sign-up is not open yet. Please check back soon.', 'error');
+                showToast(T.newsletterClosed, 'error');
                 return;
             }
 
             if (await submitForm(newsletterForm, endpoint, { email })) {
-                showToast('Success! You have subscribed to our updates.', 'success');
+                showToast(T.subscribed, 'success');
                 emailInput.value = '';
             }
         });
@@ -275,7 +320,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!res.ok) throw new Error(`HTTP ${res.status}`);
             return true;
         } catch (err) {
-            showToast('Sorry, your message could not be sent. Please email us directly.', 'error');
+            showToast(T.sendFailed, 'error');
             return false;
         } finally {
             button.disabled = false;

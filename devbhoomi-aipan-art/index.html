@@ -75,7 +75,7 @@ modal: true
                     <h2 class="section-title">Featured Collections</h2>
                 </div>
                 <div class="grid-3">
-                    {% for p in devbhoomi.products | selectattr("featured") %}
+                    {% for p in devbhoomi.products | localize(lang) | selectattr("featured") %}
                         {% include "devbhoomi/product-card.njk" %}
                     {% endfor %}
                 </div>

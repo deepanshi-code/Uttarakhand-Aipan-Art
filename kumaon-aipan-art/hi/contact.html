@@ -1,0 +1,102 @@
+---
+title: "संपर्क करें | कुमाऊँ ऐपण कला"
+description: "थोक ऑर्डर, कॉर्पोरेट उपहार हैम्पर या कार्यशाला से जुड़ी पूछताछ के लिए कुमाऊँ ऐपण कला से संपर्क करें। हमारे हल्द्वानी स्टूडियो पर आएँ।"
+nav: "contact"
+modal: false
+---
+    {%- set c = kumaon.contact | localize(lang) %}
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" style="padding: 80px 20px 90px;">
+            <div class="hero-content">
+                <span class="hero-tag">आइए साथ काम करें</span>
+                <h1>हमारी टीम से जुड़ें</h1>
+                <p>कॉर्पोरेट उपहार हैम्पर मँगवाना, थोक ऑर्डर देना या हमारी सामुदायिक कार्यशालाओं से जुड़ना चाहते हैं? हमें संदेश भेजें।</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <!-- Left: Form -->
+                    <div class="form-card">
+                        <h3>पूछताछ भेजें</h3>
+                        <form id="kumaon-contact-form" class="js-contact-form" novalidate data-endpoint="{{ c.formEndpoint }}" data-mailto="{{ c.emails[0] }}">
+                            <!-- Spam trap: real visitors never see or fill this field -->
+                            <input type="text" name="_gotcha" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+                            <div class="form-group">
+                                <label for="name">आपका नाम</label>
+                                <input type="text" id="name" name="name" autocomplete="name" class="form-control" placeholder="अपना नाम लिखें" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">ईमेल पता</label>
+                                <input type="email" id="email" name="email" autocomplete="email" class="form-control" placeholder="अपना ईमेल लिखें" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="inquiry-type">पूछताछ का प्रकार</label>
+                                <select id="inquiry-type" name="inquiry-type" class="form-control" required>
+                                    <option value="" disabled selected>एक विकल्प चुनें...</option>
+                                    <option value="retail">खुदरा ख़रीद से जुड़ा प्रश्न</option>
+                                    <option value="wholesale">थोक / बड़ा ऑर्डर</option>
+                                    <option value="corporate">कॉर्पोरेट उपहार सेट</option>
+                                    <option value="workshop">कारीगर प्रशिक्षण / कार्यशालाएँ</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">आपका संदेश</label>
+                                <textarea id="message" name="message" class="form-control" placeholder="अपने अनुरोध का विवरण बताएँ..." required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">पूछताछ भेजें</button>
+                        </form>
+                    </div>
+
+                    <!-- Right: Info Panel -->
+                    <div class="detail-card">
+                        <div>
+                            <h3>हमारा मुख्य स्टूडियो</h3>
+                            <div class="contact-blocks">
+                                <div class="contact-block">
+                                    <div class="contact-icon" aria-hidden="true">{% icon "map-pin" %}</div>
+                                    <div class="contact-info">
+                                        <h4>स्टूडियो और कार्यशाला</h4>
+                                        <p>{{ c.address | join('<br>') | safe }}</p>
+                                    </div>
+                                </div>
+                                <div class="contact-block">
+                                    <div class="contact-icon" aria-hidden="true">{% icon "mail" %}</div>
+                                    <div class="contact-info">
+                                        <h4>ईमेल सहायता</h4>
+                                        <p>{{ c.emails | join('<br>') | safe }}</p>
+                                    </div>
+                                </div>
+                                <div class="contact-block">
+                                    <div class="contact-icon" aria-hidden="true">{% icon "phone" %}</div>
+                                    <div class="contact-info">
+                                        <h4>फ़ोन और व्हाट्सऐप</h4>
+                                        <p>{{ c.phone }}<br>{{ c.hours }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            {%- set social = c.social %}
+                            {%- if social.facebook or social.instagram or social.youtube %}
+                            <div class="social-panel">
+                                <h4>हमारे काम से जुड़े रहें</h4>
+                                <div class="social-row">
+                                    {%- set socialClass = "social-icon-btn" %}
+                                    {%- include "social-links.njk" %}
+                                </div>
+                            </div>
+                            {%- endif %}
+                            <div class="map-container">
+                                <iframe src="https://maps.google.com/maps?q={{ c.mapQuery | urlencode }}&amp;output=embed" title="हमारे स्टूडियो का स्थान दिखाता नक्शा" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>

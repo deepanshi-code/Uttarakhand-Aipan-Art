@@ -1,20 +1,20 @@
     <!-- Product Details Modal -->
     <div class="modal-overlay" id="product-modal">
         <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-            <button type="button" class="close-modal" id="close-modal" aria-label="Close product details">&times;</button>
+            <button type="button" class="close-modal" id="close-modal" aria-label="{{ ts.closeDetails }}">&times;</button>
             <div class="modal-body">
                 <div class="modal-img">
                     <img id="modal-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="">
                 </div>
                 <div class="modal-details">
                     <span class="product-category" id="modal-category"></span>
-                    <h2 id="modal-title">Product details</h2>
+                    <h2 id="modal-title">{{ ts.productDetails }}</h2>
                     <div class="product-price" id="modal-price"></div>
                     <p id="modal-description"></p>
                     <div class="modal-actions">
-                        <a href="contact.html" class="modal-btn" style="text-align: center;">Inquire Now</a>
+                        <a href="contact.html" class="modal-btn" style="text-align: center;">{{ t.inquire }}</a>
                         <!-- WhatsApp number comes from contact.whatsapp in _data/devbhoomi.json -->
-                        <a href="#" id="modal-whatsapp" class="whatsapp-btn" data-whatsapp="{{ devbhoomi.contact.whatsapp }}" target="_blank" rel="noopener">Enquire on WhatsApp</a>
+                        <a href="#" id="modal-whatsapp" class="whatsapp-btn" data-whatsapp="{{ devbhoomi.contact.whatsapp }}" target="_blank" rel="noopener">{{ ts.whatsapp }}</a>
                     </div>
                 </div>
             </div>
@@ -22,4 +22,4 @@
     </div>
 
     <!-- Product details for the popup, generated from _data/devbhoomi.json -->
-    <script type="application/json" id="product-data">{{ devbhoomi.products | dump | safe }}</script>
+    <script type="application/json" id="product-data">{{ devbhoomi.products | localize(lang) | dump | safe }}</script>

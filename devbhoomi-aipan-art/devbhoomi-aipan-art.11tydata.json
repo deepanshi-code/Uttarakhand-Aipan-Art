@@ -1,4 +1,8 @@
 {
   "layout": "devbhoomi.njk",
-  "permalink": "{{ page.filePathStem }}.html"
+  "permalink": "{{ page.filePathStem }}.html",
+  "lang": "en",
+  "base": "",
+  "siteDir": "devbhoomi-aipan-art",
+  "i18nKey": "devbhoomi"
 }

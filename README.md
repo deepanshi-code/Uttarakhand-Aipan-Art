@@ -25,6 +25,36 @@ npm run serve
 
 Open <http://localhost:8765/> and choose a site.
 
+## Checks
+
+```bash
+npm run check
+```
+
+Runs three checks on the built site (`npm run build` first):
+
+| Check | Tool | Catches |
+|---|---|---|
+| `check:html` | html-validate | Invalid HTML |
+| `check:links` | linkinator | Broken links and missing images |
+| `check:a11y` | axe-core in headless Chrome | WCAG 2.1 AA accessibility violations |
+
+The GitHub workflow runs the same checks before publishing; if one fails, the live site is not updated. The accessibility check uses an installed Chrome (set `CHROME_PATH` if it is not found). It also lists "needs review" items, such as text over background images, which axe cannot judge automatically; check those by eye.
+
+## Hindi version
+
+Each site has Hindi pages in `<site>/hi/`, linked by the हिन्दी / English switch in every header.
+
+| To change Hindi... | Edit |
+|---|---|
+| Page text | the page in `<site>/hi/` |
+| Menus, buttons, footer, popup | the `hi` sections of `_data/i18n.json` |
+| Product names and descriptions | each product's `hi` fields in `_data/<site>.json` |
+| Address and opening hours | `contact.hi` in `_data/<site>.json` |
+| Script messages (search results, form messages, WhatsApp text) | the `hi` table at the top of `<site>/js/main.js` |
+
+When you change an English page, make the matching change to its Hindi page. The Hindi text was translated with AI assistance and should be checked by a fluent Hindi speaker.
+
 ## Build for deployment
 
 ```bash

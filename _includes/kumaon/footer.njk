@@ -2,8 +2,8 @@
     <footer>
         <div class="footer-top">
             <div class="footer-col footer-logo">
-                <h2>Kumaon</h2>
-                <p>Empowering local women artisans of Kumaon by bringing traditional Aipan art into modern lifestyles.</p>
+                <h2>{{ t.name }}</h2>
+                <p>{{ t.footerText }}</p>
                 {%- set social = kumaon.contact.social %}
                 {%- if social.facebook or social.instagram or social.youtube %}
                 <div class="footer-social-row">
@@ -13,37 +13,37 @@
                 {%- endif %}
             </div>
             <div class="footer-col">
-                <h3>Shop</h3>
+                <h3>{{ t.shopTitle }}</h3>
                 <ul class="footer-links">
-                    <li><a href="products.html">Home &amp; Living</a></li>
-                    <li><a href="products.html">Apparel &amp; Accessories</a></li>
-                    <li><a href="products.html">Gift Hampers</a></li>
+                    <li><a href="products.html">{{ t.shopLinks[0] }}</a></li>
+                    <li><a href="products.html">{{ t.shopLinks[1] }}</a></li>
+                    <li><a href="products.html">{{ t.shopLinks[2] }}</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h3>Company</h3>
+                <h3>{{ t.companyTitle }}</h3>
                 <ul class="footer-links">
-                    <li><a href="about.html">Our Mission</a></li>
-                    <li><a href="gallery.html">Community Workshops</a></li>
-                    <li><a href="contact.html">Bulk Inquiries</a></li>
+                    <li><a href="about.html">{{ t.linkMission }}</a></li>
+                    <li><a href="gallery.html">{{ t.linkGallery }}</a></li>
+                    <li><a href="contact.html">{{ t.linkBulk }}</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h3>Keep In Touch</h3>
-                <p>Sign up to receive news about our training campaigns and product launches.</p>
+                <h3>{{ t.newsletterTitle }}</h3>
+                <p>{{ t.newsletterText }}</p>
                 {%- if kumaon.contact.newsletterEndpoint %}
                 <form class="subscribe-form" id="subscribe-form" novalidate data-endpoint="{{ kumaon.contact.newsletterEndpoint }}">
-                    <label for="newsletter-email" class="visually-hidden">Email address for newsletter</label>
-                    <input type="email" id="newsletter-email" name="email" autocomplete="email" class="subscribe-input" placeholder="Your Email Address" required>
-                    <button type="submit" class="subscribe-btn">Join</button>
+                    <label for="newsletter-email" class="visually-hidden">{{ ts.newsletterEmailLabel }}</label>
+                    <input type="email" id="newsletter-email" name="email" autocomplete="email" class="subscribe-input" placeholder="{{ ts.emailPlaceholder }}" required>
+                    <button type="submit" class="subscribe-btn">{{ t.subscribe }}</button>
                 </form>
                 {%- else %}
-                <p class="newsletter-soon">Our newsletter is launching soon.</p>
+                <p class="newsletter-soon">{{ ts.newsletterSoon }}</p>
                 {%- endif %}
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Kumaon Aipan Art. All Rights Reserved. Crafted from scratch. &middot; <a href="credits.html">Photo credits</a> &middot; <a href="../index.html">All Aipan sites</a></p>
-            <p>Empowering Mountain Communities</p>
+            <p>&copy; {{ t.copyright }} &middot; <a href="credits.html">{{ ts.photoCredits }}</a> &middot; <a href="{{ base }}../index.html">{{ ts.allSites }}</a></p>
+            <p>{{ t.tagline }}</p>
         </div>
     </footer>

@@ -10,6 +10,19 @@ module.exports = function (eleventyConfig) {
     // {% icon "phone" %} -> inline SVG line icon
     eleventyConfig.addShortcode("icon", icon);
 
+    // {{ products | localize(lang) }}: an object's "hi" fields replace its English ones on Hindi
+    // pages; the language sub-objects are dropped either way. Works on objects and arrays.
+    const LANGS = ["hi"];
+    const localizeOne = (value, lang) => {
+        if (!value || typeof value !== "object" || Array.isArray(value)) return value;
+        const base = { ...value };
+        for (const l of LANGS) delete base[l];
+        return LANGS.includes(lang) && value[lang] ? { ...base, ...value[lang] } : base;
+    };
+    eleventyConfig.addFilter("localize", (value, lang) =>
+        Array.isArray(value) ? value.map((v) => localizeOne(v, lang)) : localizeOne(value, lang)
+    );
+
     // Static files are copied as-is
     for (const site of SITES) {
         for (const dir of ["css", "js", "assets"]) {

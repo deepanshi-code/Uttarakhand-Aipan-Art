@@ -1431,3 +1431,23 @@ button[disabled] {
 .newsletter-soon {
     font-style: italic;
 }
+
+/* ===== Language Switch ===== */
+.nav-links .lang-switch {
+    border: 1px solid currentColor;
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: 0.85rem;
+}
+
+/* ===== Hindi Pages (Devanagari) ===== */
+/* Latin display fonts have no Devanagari letters; letter-spacing breaks joined letters */
+html[lang="hi"] body,
+html[lang="hi"] body * {
+    font-family: 'Noto Sans Devanagari', 'Inter', sans-serif;
+    letter-spacing: normal !important;
+}
+
+html[lang="hi"] :is(h1, h2, h3, h4, .logo-name, .footer-logo h2) {
+    line-height: 1.4;
+}

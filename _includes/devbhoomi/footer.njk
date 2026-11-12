@@ -2,8 +2,8 @@
     <footer>
         <div class="footer-top">
             <div class="footer-col footer-logo">
-                <h2>Devbhoomi</h2>
-                <p>Preserving, sharing, and honoring the sacred Aipan art heritage of the Kumaon region in Uttarakhand.</p>
+                <h2>{{ t.name }}</h2>
+                <p>{{ t.footerText }}</p>
                 {%- set social = devbhoomi.contact.social %}
                 {%- if social.facebook or social.instagram or social.youtube %}
                 <div class="footer-socials">
@@ -13,38 +13,38 @@
                 {%- endif %}
             </div>
             <div class="footer-col">
-                <h3>Quick Links</h3>
+                <h3>{{ t.quickLinks }}</h3>
                 <ul class="footer-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="products.html">Catalogue</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="index.html">{{ ts.nav.index }}</a></li>
+                    <li><a href="about.html">{{ ts.nav.about }}</a></li>
+                    <li><a href="products.html">{{ t.linkCatalogue }}</a></li>
+                    <li><a href="gallery.html">{{ ts.nav.gallery }}</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h3>Our Categories</h3>
+                <h3>{{ t.categoriesTitle }}</h3>
                 <ul class="footer-links">
-                    <li><a href="products.html">Ritualistic Chowkis</a></li>
-                    <li><a href="products.html">Divine Wall Art</a></li>
-                    <li><a href="products.html">Sacred Home Decor</a></li>
+                    <li><a href="products.html">{{ t.categories[0] }}</a></li>
+                    <li><a href="products.html">{{ t.categories[1] }}</a></li>
+                    <li><a href="products.html">{{ t.categories[2] }}</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h3>Newsletter</h3>
-                <p>Receive updates about our artisan workshops and seasonal collections.</p>
+                <h3>{{ t.newsletterTitle }}</h3>
+                <p>{{ t.newsletterText }}</p>
                 {%- if devbhoomi.contact.newsletterEndpoint %}
                 <form class="newsletter-form" id="newsletter-form" novalidate data-endpoint="{{ devbhoomi.contact.newsletterEndpoint }}">
-                    <label for="newsletter-email" class="visually-hidden">Email address for newsletter</label>
-                    <input type="email" id="newsletter-email" name="email" autocomplete="email" class="newsletter-input" placeholder="Your Email Address" required>
-                    <button type="submit" class="newsletter-btn">Subscribe</button>
+                    <label for="newsletter-email" class="visually-hidden">{{ ts.newsletterEmailLabel }}</label>
+                    <input type="email" id="newsletter-email" name="email" autocomplete="email" class="newsletter-input" placeholder="{{ ts.emailPlaceholder }}" required>
+                    <button type="submit" class="newsletter-btn">{{ t.subscribe }}</button>
                 </form>
                 {%- else %}
-                <p class="newsletter-soon">Our newsletter is launching soon.</p>
+                <p class="newsletter-soon">{{ ts.newsletterSoon }}</p>
                 {%- endif %}
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Devbhoomi Aipan Art. All Rights Reserved. Crafted from scratch. &middot; <a href="credits.html">Photo credits</a> &middot; <a href="../index.html">All Aipan sites</a></p>
-            <p>Made with Pride in Uttarakhand</p>
+            <p>&copy; {{ t.copyright }} &middot; <a href="credits.html">{{ ts.photoCredits }}</a> &middot; <a href="{{ base }}../index.html">{{ ts.allSites }}</a></p>
+            <p>{{ t.tagline }}</p>
         </div>
     </footer>

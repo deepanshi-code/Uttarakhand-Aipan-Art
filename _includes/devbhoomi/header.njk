@@ -5,23 +5,24 @@
                 <a href="index.html">
                     <div class="logo-icon">D</div>
                     <div class="logo-text">
-                        <span class="logo-name">Devbhoomi</span>
-                        <span>Aipan Art</span>
+                        <span class="logo-name">{{ t.name }}</span>
+                        <span>{{ ts.aipanArt }}</span>
                     </div>
                 </a>
             </div>
-            <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+            <button type="button" class="menu-toggle" id="menu-toggle" aria-label="{{ ts.openMenu }}" aria-expanded="false" aria-controls="nav-links">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
             <ul class="nav-links" id="nav-links">
-                <li><a href="index.html"{% if nav == "index" %} class="active"{% endif %}>Home</a></li>
-                <li><a href="about.html"{% if nav == "about" %} class="active"{% endif %}>About Us</a></li>
-                <li><a href="products.html"{% if nav == "products" %} class="active"{% endif %}>Products</a></li>
-                <li><a href="gallery.html"{% if nav == "gallery" %} class="active"{% endif %}>Gallery</a></li>
-                <li><a href="contact.html"{% if nav == "contact" %} class="active"{% endif %}>Contact Us</a></li>
-                <li><a href="contact.html" class="cta-btn">Book Custom Art</a></li>
+                <li><a href="index.html"{% if nav == "index" %} class="active"{% endif %}>{{ ts.nav.index }}</a></li>
+                <li><a href="about.html"{% if nav == "about" %} class="active"{% endif %}>{{ ts.nav.about }}</a></li>
+                <li><a href="products.html"{% if nav == "products" %} class="active"{% endif %}>{{ ts.nav.products }}</a></li>
+                <li><a href="gallery.html"{% if nav == "gallery" %} class="active"{% endif %}>{{ ts.nav.gallery }}</a></li>
+                <li><a href="contact.html"{% if nav == "contact" %} class="active"{% endif %}>{{ ts.nav.contact }}</a></li>
+                <li><a href="contact.html" class="cta-btn">{{ t.cta }}</a></li>
+                <li><a href="{% if lang == "hi" %}../{% else %}hi/{% endif %}{{ nav }}.html" class="lang-switch" lang="{{ ts.langSwitchLang }}" hreflang="{{ ts.langSwitchLang }}" aria-label="{{ ts.langSwitchLabel }}">{{ ts.langSwitch }}</a></li>
             </ul>
         </div>
     </header>

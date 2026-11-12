@@ -20,7 +20,14 @@
       "youtube": ""
     },
     "formEndpoint": "",
-    "newsletterEndpoint": ""
+    "newsletterEndpoint": "",
+    "hi": {
+      "address": [
+        "क्राफ़्ट गिल्ड हाउस, हल्द्वानी,",
+        "नैनीताल, उत्तराखंड - 263139, भारत"
+      ],
+      "hours": "सोम-शनि: सुबह 10:00 - शाम 5:00 बजे"
+    }
   },
   "products": [
     {
@@ -33,7 +40,14 @@
       "category": "Modern Home & Living",
       "img": "assets/photos/coasters",
       "description": "A set of four square wooden coasters painted with traditional red and white geometric Aipan art. They are treated with a specialized waterproof finish, making them perfect for holding hot/cold beverages while showcasing a beautiful touch of Himalayan heritage.",
-      "featured": true
+      "featured": true,
+      "hi": {
+        "title": "ऐपण लकड़ी के कोस्टर",
+        "category": "आधुनिक घर और जीवन",
+        "label": "गृह सज्जा",
+        "tag": "सबसे ज़्यादा बिकने वाला",
+        "description": "लाल और सफ़ेद ज्यामितीय ऐपण से रंगे चार चौकोर लकड़ी के कोस्टर का सेट। इन पर विशेष जलरोधी परत है, इसलिए ये गर्म और ठंडे पेय रखने के लिए उपयुक्त हैं और हिमालयी विरासत की सुंदर झलक देते हैं।"
+      }
     },
     {
       "id": "aipan-tray",
@@ -45,7 +59,14 @@
       "category": "Modern Home & Living",
       "img": "assets/photos/round-floor",
       "description": "Handcrafted wooden serving tray decorated with traditional Kumaoni borders and geometric lattice motifs. Perfect for serving guests or displaying as a centerpiece in your dining area.",
-      "featured": true
+      "featured": true,
+      "hi": {
+        "title": "सजावटी सर्विंग ट्रे",
+        "category": "आधुनिक घर और जीवन",
+        "label": "गृह सज्जा",
+        "tag": "नया",
+        "description": "पारंपरिक कुमाऊँनी किनारों और ज्यामितीय जाली की आकृतियों से सजी हस्तनिर्मित लकड़ी की सर्विंग ट्रे। मेहमानों को परोसने या भोजन कक्ष में सजावट के लिए उपयुक्त।"
+      }
     },
     {
       "id": "aipan-stole",
@@ -57,7 +78,14 @@
       "category": "Apparel & Accessories",
       "img": "assets/photos/border-bottom",
       "description": "A luxurious soft wool stole featuring beautiful hand-painted Aipan creepers and floral borders along the margins. A beautiful statement piece that adds ethnic elegance to modern outfits.",
-      "featured": false
+      "featured": false,
+      "hi": {
+        "title": "हाथ से रंगा पश्मीना स्टोल",
+        "category": "परिधान और सहायक सामग्री",
+        "label": "परिधान और सहायक सामग्री",
+        "tag": "प्रीमियम",
+        "description": "मुलायम ऊन का शानदार स्टोल, जिसके किनारों पर हाथ से बनी ऐपण बेलें और फूलों के बॉर्डर हैं। आधुनिक पहनावे में पारंपरिक सुंदरता जोड़ने वाली ख़ास वस्तु।"
+      }
     },
     {
       "id": "aipan-tote",
@@ -69,7 +97,14 @@
       "category": "Apparel & Accessories",
       "img": "assets/photos/wall-paisley",
       "description": "Durable organic canvas tote bag featuring screen-printed traditional Aipan patterns. Spurred by sustainable living, it is spacious enough for daily groceries or office needs.",
-      "featured": false
+      "featured": false,
+      "hi": {
+        "title": "पर्यावरण-अनुकूल कैनवास थैला",
+        "category": "परिधान और सहायक सामग्री",
+        "label": "परिधान और सहायक सामग्री",
+        "tag": "पर्यावरण-अनुकूल",
+        "description": "जैविक कैनवास का मज़बूत थैला, जिस पर पारंपरिक ऐपण आकृतियाँ स्क्रीन-प्रिंट की गई हैं। टिकाऊ जीवनशैली से प्रेरित, रोज़ की ख़रीदारी या दफ़्तर के लिए पर्याप्त बड़ा।"
+      }
     },
     {
       "id": "gift-box",
@@ -81,7 +116,14 @@
       "category": "Corporate & Festive Gifting",
       "img": "assets/photos/chowki-corner",
       "description": "A beautiful cardboard gift box containing two hand-painted clay diyas, a mini Aipan floor decal, and organic incense cones. An ideal eco-friendly present for festivals and special occasions.",
-      "featured": true
+      "featured": true,
+      "hi": {
+        "title": "त्योहार का ऐपण उपहार बॉक्स",
+        "category": "कॉर्पोरेट और त्योहार उपहार",
+        "label": "उपहार सेट",
+        "tag": "त्योहार",
+        "description": "गत्ते का सुंदर उपहार बॉक्स, जिसमें हाथ से रंगे मिट्टी के दो दीये, फ़र्श के लिए छोटा ऐपण स्टिकर और जैविक धूप शंकु हैं। त्योहारों और ख़ास मौक़ों के लिए पर्यावरण-अनुकूल उपहार।"
+      }
     },
     {
       "id": "corporate-set",
@@ -93,7 +135,14 @@
       "category": "Corporate & Festive Gifting",
       "img": "assets/photos/wall-leaves",
       "description": "A premium corporate gift set containing an Aipan-embossed diary, a painted bookmark, and a pair of coasters. The notebook cover features customized layout patterns reflecting local craftsmanship.",
-      "featured": false
+      "featured": false,
+      "hi": {
+        "title": "कॉर्पोरेट उपहार सेट (अपनी पसंद का)",
+        "category": "कॉर्पोरेट और त्योहार उपहार",
+        "label": "उपहार सेट",
+        "tag": "थोक ऑर्डर",
+        "description": "ऐपण उभरी डायरी, रंगा हुआ बुकमार्क और कोस्टर की एक जोड़ी वाला प्रीमियम कॉर्पोरेट उपहार सेट। नोटबुक के कवर पर स्थानीय शिल्प को दर्शाती आपकी पसंद की आकृतियाँ।"
+      }
     }
   ]
 }

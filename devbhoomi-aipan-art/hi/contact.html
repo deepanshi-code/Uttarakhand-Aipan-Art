@@ -1,0 +1,94 @@
+---
+title: "संपर्क करें | देवभूमि ऐपण कला"
+description: "उत्पाद संबंधी पूछताछ, विशेष ऑर्डर या सहयोग के लिए देवभूमि ऐपण कला से संपर्क करें। संदेश भेजें या हमारे अल्मोड़ा केंद्र पर आएँ।"
+nav: "contact"
+modal: false
+---
+    {%- set c = devbhoomi.contact | localize(lang) %}
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" style="padding: 70px 20px 80px;">
+            <div class="hero-content">
+                <span class="hero-badge">संपर्क में रहें</span>
+                <h1>देवभूमि से जुड़ें</h1>
+                <p>पारंपरिक चौकी के डिज़ाइन, विशेष चित्रकारी के ऑर्डर या मिलकर कार्यशाला करने के बारे में कोई प्रश्न है? हमसे जुड़िए।</p>
+            </div>
+            <div class="hero-pattern"></div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <!-- Left: Interactive Form -->
+                    <div class="contact-card">
+                        <h3>हमें संदेश भेजें</h3>
+                        <form id="devbhoomi-contact-form" class="js-contact-form" novalidate data-endpoint="{{ c.formEndpoint }}" data-mailto="{{ c.emails[0] }}">
+                            <!-- Spam trap: real visitors never see or fill this field -->
+                            <input type="text" name="_gotcha" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+                            <div class="form-group">
+                                <label for="name">आपका नाम</label>
+                                <input type="text" id="name" name="name" autocomplete="name" class="form-control" placeholder="अपना पूरा नाम लिखें" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">ईमेल पता</label>
+                                <input type="email" id="email" name="email" autocomplete="email" class="form-control" placeholder="अपना ईमेल लिखें" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">पूछताछ का विषय</label>
+                                <input type="text" id="subject" name="subject" class="form-control" placeholder="जैसे, विशेष सरस्वती चौकी का ऑर्डर" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">आपका संदेश</label>
+                                <textarea id="message" name="message" class="form-control" placeholder="हमारी पारंपरिक कला के बारे में हम आपकी क्या सहायता कर सकते हैं?" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">संदेश भेजें</button>
+                        </form>
+                    </div>
+
+                    <!-- Right: Info Box -->
+                    <div class="info-box">
+                        <div>
+                            <h3>हमारा रचनात्मक केंद्र</h3>
+                            <div class="info-items">
+                                <div class="info-item">
+                                    <div class="info-icon" aria-hidden="true">{% icon "map-pin" %}</div>
+                                    <div class="info-text">
+                                        <h4>केंद्र का पता</h4>
+                                        <p>{{ c.address | join('<br>') | safe }}</p>
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-icon" aria-hidden="true">{% icon "mail" %}</div>
+                                    <div class="info-text">
+                                        <h4>ईमेल पूछताछ</h4>
+                                        <p>{{ c.emails | join('<br>') | safe }}</p>
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-icon" aria-hidden="true">{% icon "phone" %}</div>
+                                    <div class="info-text">
+                                        <h4>हमारे स्टूडियो को फ़ोन करें</h4>
+                                        <p>{{ c.phone }}<br>{{ c.hours }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            {%- set social = c.social %}
+                            {%- if social.facebook or social.instagram or social.youtube %}
+                            <div class="social-links">
+                                {%- set socialClass = "social-btn" %}
+                                {%- include "social-links.njk" %}
+                            </div>
+                            {%- endif %}
+                            <div class="map-placeholder">
+                                <iframe src="https://maps.google.com/maps?q={{ c.mapQuery | urlencode }}&amp;output=embed" title="हमारे स्टूडियो का स्थान दिखाता नक्शा" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>

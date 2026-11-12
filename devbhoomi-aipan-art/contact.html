@@ -4,6 +4,7 @@ description: "Reach out to Devbhoomi Aipan Art for product inquiries, custom com
 nav: "contact"
 modal: false
 ---
+    {%- set c = devbhoomi.contact | localize(lang) %}
     <main>
         <!-- Hero Section -->
         <section class="hero" style="padding: 70px 20px 80px;">
@@ -22,7 +23,7 @@ modal: false
                     <!-- Left: Interactive Form -->
                     <div class="contact-card">
                         <h3>Send Us a Message</h3>
-                        <form id="devbhoomi-contact-form" class="js-contact-form" novalidate data-endpoint="{{ devbhoomi.contact.formEndpoint }}" data-mailto="{{ devbhoomi.contact.emails[0] }}">
+                        <form id="devbhoomi-contact-form" class="js-contact-form" novalidate data-endpoint="{{ c.formEndpoint }}" data-mailto="{{ c.emails[0] }}">
                             <!-- Spam trap: real visitors never see or fill this field -->
                             <input type="text" name="_gotcha" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
                             <div class="form-group">
@@ -54,28 +55,28 @@ modal: false
                                     <div class="info-icon" aria-hidden="true">{% icon "map-pin" %}</div>
                                     <div class="info-text">
                                         <h4>Center Address</h4>
-                                        <p>{{ devbhoomi.contact.address | join('<br>') | safe }}</p>
+                                        <p>{{ c.address | join('<br>') | safe }}</p>
                                     </div>
                                 </div>
                                 <div class="info-item">
                                     <div class="info-icon" aria-hidden="true">{% icon "mail" %}</div>
                                     <div class="info-text">
                                         <h4>Email Inquiries</h4>
-                                        <p>{{ devbhoomi.contact.emails | join('<br>') | safe }}</p>
+                                        <p>{{ c.emails | join('<br>') | safe }}</p>
                                     </div>
                                 </div>
                                 <div class="info-item">
                                     <div class="info-icon" aria-hidden="true">{% icon "phone" %}</div>
                                     <div class="info-text">
                                         <h4>Call Our Studio</h4>
-                                        <p>{{ devbhoomi.contact.phone }}<br>{{ devbhoomi.contact.hours }}</p>
+                                        <p>{{ c.phone }}<br>{{ c.hours }}</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <div>
-                            {%- set social = devbhoomi.contact.social %}
+                            {%- set social = c.social %}
                             {%- if social.facebook or social.instagram or social.youtube %}
                             <div class="social-links">
                                 {%- set socialClass = "social-btn" %}
@@ -83,7 +84,7 @@ modal: false
                             </div>
                             {%- endif %}
                             <div class="map-placeholder">
-                                <iframe src="https://maps.google.com/maps?q={{ devbhoomi.contact.mapQuery | urlencode }}&amp;output=embed" title="Map showing our studio location" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <iframe src="https://maps.google.com/maps?q={{ c.mapQuery | urlencode }}&amp;output=embed" title="Map showing our studio location" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
                     </div>

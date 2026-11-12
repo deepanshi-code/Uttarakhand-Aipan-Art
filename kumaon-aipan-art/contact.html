@@ -4,6 +4,7 @@ description: "Get in touch with Kumaon Aipan Art for wholesale orders, corporate
 nav: "contact"
 modal: false
 ---
+    {%- set c = kumaon.contact | localize(lang) %}
     <main>
         <!-- Hero Section -->
         <section class="hero" style="padding: 80px 20px 90px;">
@@ -21,7 +22,7 @@ modal: false
                     <!-- Left: Form -->
                     <div class="form-card">
                         <h3>Send an Inquiry</h3>
-                        <form id="kumaon-contact-form" class="js-contact-form" novalidate data-endpoint="{{ kumaon.contact.formEndpoint }}" data-mailto="{{ kumaon.contact.emails[0] }}">
+                        <form id="kumaon-contact-form" class="js-contact-form" novalidate data-endpoint="{{ c.formEndpoint }}" data-mailto="{{ c.emails[0] }}">
                             <!-- Spam trap: real visitors never see or fill this field -->
                             <input type="text" name="_gotcha" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
                             <div class="form-group">
@@ -59,28 +60,28 @@ modal: false
                                     <div class="contact-icon" aria-hidden="true">{% icon "map-pin" %}</div>
                                     <div class="contact-info">
                                         <h4>Studio &amp; Workshop</h4>
-                                        <p>{{ kumaon.contact.address | join('<br>') | safe }}</p>
+                                        <p>{{ c.address | join('<br>') | safe }}</p>
                                     </div>
                                 </div>
                                 <div class="contact-block">
                                     <div class="contact-icon" aria-hidden="true">{% icon "mail" %}</div>
                                     <div class="contact-info">
                                         <h4>Email Support</h4>
-                                        <p>{{ kumaon.contact.emails | join('<br>') | safe }}</p>
+                                        <p>{{ c.emails | join('<br>') | safe }}</p>
                                     </div>
                                 </div>
                                 <div class="contact-block">
                                     <div class="contact-icon" aria-hidden="true">{% icon "phone" %}</div>
                                     <div class="contact-info">
                                         <h4>Phone &amp; Whatsapp</h4>
-                                        <p>{{ kumaon.contact.phone }}<br>{{ kumaon.contact.hours }}</p>
+                                        <p>{{ c.phone }}<br>{{ c.hours }}</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <div>
-                            {%- set social = kumaon.contact.social %}
+                            {%- set social = c.social %}
                             {%- if social.facebook or social.instagram or social.youtube %}
                             <div class="social-panel">
                                 <h4>Follow Our Impact</h4>
@@ -91,7 +92,7 @@ modal: false
                             </div>
                             {%- endif %}
                             <div class="map-container">
-                                <iframe src="https://maps.google.com/maps?q={{ kumaon.contact.mapQuery | urlencode }}&amp;output=embed" title="Map showing our studio location" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <iframe src="https://maps.google.com/maps?q={{ c.mapQuery | urlencode }}&amp;output=embed" title="Map showing our studio location" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
                     </div>

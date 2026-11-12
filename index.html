@@ -211,7 +211,13 @@
             font-weight: 600;
             text-decoration: none;
         }
-        /* Whole card is clickable through its one link */
+        .site-links { margin-top: auto; display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
+        .site-links .site-link { margin-top: 0; }
+        /* Sits above the card-wide link so it can be clicked separately */
+        .site-link-hi { position: relative; z-index: 1; font-weight: 600; text-underline-offset: 4px; }
+        .devbhoomi .site-link-hi { color: var(--geru); }
+        .kumaon .site-link-hi { color: #A3311C; }
+        /* Whole card is clickable through its main link */
         .site-link::after { content: ""; position: absolute; inset: 0; }
         .site-link span { transition: transform 0.25s ease; }
         .site-card:hover .site-link span { transform: translateX(4px); }
@@ -302,7 +308,7 @@
     <header class="hero">
         <span class="eyebrow">Folk art of Kumaon &middot; Uttarakhand</span>
         <h1>Uttarakhand Aipan Art</h1>
-        <p>Two websites for women-led Aipan art businesses from the Kumaon hills: one rooted in ritual tradition, one designed for modern living.</p>
+        <p>Two websites for women-led Aipan art businesses from the Kumaon hills: one rooted in ritual tradition, one designed for modern living. Both are available in English and Hindi.</p>
         <div class="hero-actions">
             <a href="devbhoomi-aipan-art/index.html" class="btn btn-gold">Explore Devbhoomi</a>
             <a href="kumaon-aipan-art/index.html" class="btn btn-outline">Explore Kumaon</a>
@@ -333,7 +339,10 @@
                                 <li>Framed heritage wall art</li>
                                 <li>Custom commissions and festive decor</li>
                             </ul>
-                            <a href="devbhoomi-aipan-art/index.html" class="site-link">Visit Devbhoomi <span aria-hidden="true">&rarr;</span></a>
+                            <div class="site-links">
+                                <a href="devbhoomi-aipan-art/index.html" class="site-link">Visit Devbhoomi <span aria-hidden="true">&rarr;</span></a>
+                                <a href="devbhoomi-aipan-art/hi/index.html" class="site-link-hi" lang="hi" hreflang="hi">हिन्दी में देखें</a>
+                            </div>
                         </div>
                     </article>
 
@@ -350,7 +359,10 @@
                                 <li>Hand-painted stoles and canvas totes</li>
                                 <li>Festive and corporate gift sets</li>
                             </ul>
-                            <a href="kumaon-aipan-art/index.html" class="site-link">Visit Kumaon <span aria-hidden="true">&rarr;</span></a>
+                            <div class="site-links">
+                                <a href="kumaon-aipan-art/index.html" class="site-link">Visit Kumaon <span aria-hidden="true">&rarr;</span></a>
+                                <a href="kumaon-aipan-art/hi/index.html" class="site-link-hi" lang="hi" hreflang="hi">हिन्दी में देखें</a>
+                            </div>
                         </div>
                     </article>
                 </div>

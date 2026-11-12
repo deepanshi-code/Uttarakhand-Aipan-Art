@@ -1,0 +1,39 @@
+---
+title: "हमारा संग्रह | देवभूमि ऐपण कला"
+description: "पारंपरिक चौकियों, पवित्र दीवार फ़्रेमों और त्योहारों की सजावट सहित हाथ से बनी प्रामाणिक ऐपण कला का हमारा संग्रह देखें।"
+nav: "products"
+modal: true
+---
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" style="padding: 70px 20px 80px;">
+            <div class="hero-content">
+                <span class="hero-badge">कारीगरों की प्रदर्शनी</span>
+                <h1>हस्तनिर्मित संग्रह</h1>
+                <p>पारंपरिक लाल गेरू के आधार और सफ़ेद बिस्वार की बारीक कारीगरी से बने प्रामाणिक उत्पाद। संग्रह देखें और अपनी पसंद का विशेष ऑर्डर दें।</p>
+            </div>
+            <div class="hero-pattern"></div>
+        </section>
+
+        <!-- Catalogue Section -->
+        <section class="section">
+            <div class="container">
+                <!-- Filters -->
+                <div class="filter-tabs">
+                    <button type="button" class="filter-btn active" aria-pressed="true" data-filter="all">सभी कृतियाँ</button>
+                    <button type="button" class="filter-btn" aria-pressed="false" data-filter="chowkis">पूजा की चौकियाँ</button>
+                    <button type="button" class="filter-btn" aria-pressed="false" data-filter="wallart">दिव्य दीवार कला</button>
+                    <button type="button" class="filter-btn" aria-pressed="false" data-filter="decor">पवित्र गृह सज्जा</button>
+                </div>
+
+                <!-- Product Grid -->
+                <p id="results-status" class="results-status" role="status" aria-live="polite"></p>
+                <h2 class="visually-hidden">उत्पाद</h2>
+                <div class="grid-3" id="products-grid">
+                    {% for p in devbhoomi.products | localize(lang) %}
+                        {% include "devbhoomi/product-card.njk" %}
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+    </main>

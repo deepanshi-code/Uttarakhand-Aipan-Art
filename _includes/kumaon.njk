@@ -1,30 +1,39 @@
+{%- set lang = lang or "en" -%}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ lang }}" data-base="{{ base }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
     <meta name="description" content="{{ description }}">
     <meta name="theme-color" content="#C23B22">
-    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="{{ base }}assets/favicon.svg" type="image/svg+xml">
     <!-- Social sharing preview. After deploying, add og:url and an absolute og:image URL -->
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Kumaon Aipan Art">
+    <meta property="og:site_name" content="{{ t.siteName }}">
     <meta property="og:title" content="{{ title }}">
     <meta property="og:description" content="{{ description }}">
     <meta name="twitter:card" content="summary_large_image">
+    <!-- The same page in each language, for search engines -->
+    <link rel="alternate" hreflang="en" href="{{ site.url }}/{{ siteDir }}/{{ nav }}.html">
+    <link rel="alternate" hreflang="hi" href="{{ site.url }}/{{ siteDir }}/hi/{{ nav }}.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Fonts load without blocking the first paint; text shows in a fallback font until they arrive -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"></noscript>
-    <link rel="stylesheet" href="css/style.css">
+    {%- if lang == "hi" %}
+    <!-- Devanagari fonts for the Hindi pages -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap"></noscript>
+    {%- endif %}
+    <link rel="stylesheet" href="{{ base }}css/style.css">
 </head>
 <body>
 
     <!-- Remove this banner once real products, contact details and artisan profiles are in place -->
     <div class="demo-banner" role="note">
-        Demo site for a student project: products, prices, figures, contact details and artisan profiles are sample content.
+        {{ ts.banner }}
     </div>
 
 {% include "kumaon/header.njk" %}
@@ -33,6 +42,6 @@
 {% include "kumaon/modal.njk" %}
 {% endif %}
 {% include "kumaon/footer.njk" %}
-    <script src="js/main.js" defer></script>
+    <script src="{{ base }}js/main.js" defer></script>
 </body>
 </html>
